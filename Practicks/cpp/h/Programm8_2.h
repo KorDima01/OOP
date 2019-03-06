@@ -2,7 +2,16 @@
 #define Programm8_2
 
 void Programma8_2(){
-//IN-CONSTRUCT
+  ofstream file("a.txt");
+
+	char c = 0;
+		cin >> c;
+	while (c != '\n') {
+		file << c;
+		cin.get(c);
+	}
+
+	file.close();
 }
 
-#endif 
+#endif

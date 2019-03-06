@@ -1,46 +1,14 @@
-/home/dima/github/OOP/Practicks/cpp/h/Programm2_1.h: In function ‘Programma2_1’:
-/home/dima/github/OOP/Practicks/cpp/h/Programm2_1.h:6:2: error: ‘cout’ undeclared (first use in this function)
-  cout << "Введите a и b: ";
-  ^
-/home/dima/github/OOP/Practicks/cpp/h/Programm2_1.h:6:2: note: each undeclared identifier is reported only once for each function it appears in
-/home/dima/github/OOP/Practicks/cpp/h/Programm2_1.h:7:2: error: ‘cin’ undeclared (first use in this function)
-  cin >> a >> b;
-  ^
-/home/dima/github/OOP/Practicks/cpp/h/Programm2_1.h:10:7: warning: implicit declaration of function ‘pow’ [-Wimplicit-function-declaration]
-   n = pow(a - b, 1/3);
-       ^
-/home/dima/github/OOP/Practicks/cpp/h/Programm2_1.h:10:7: warning: incompatible implicit declaration of built-in function ‘pow’
-/home/dima/github/OOP/Practicks/cpp/h/Programm2_1.h:10:7: note: include ‘<math.h>’ or provide a declaration of ‘pow’
-/home/dima/github/OOP/Practicks/cpp/h/Programm2_1.h:12:26: warning: implicit declaration of function ‘sin’ [-Wimplicit-function-declaration]
-   n = a * a + (a - b) / (sin(a * b));
-                          ^
-/home/dima/github/OOP/Practicks/cpp/h/Programm2_1.h:12:26: warning: incompatible implicit declaration of built-in function ‘sin’
-/home/dima/github/OOP/Practicks/cpp/h/Programm2_1.h:12:26: note: include ‘<math.h>’ or provide a declaration of ‘sin’
-/home/dima/github/OOP/Practicks/cpp/h/Programm2_1.h:16:24: warning: implicit declaration of function ‘sqrt’ [-Wimplicit-function-declaration]
-   m = (n + a) / (-b) + sqrt(sin(a) * sin(a) - cos(n));
-                        ^
-/home/dima/github/OOP/Practicks/cpp/h/Programm2_1.h:16:24: warning: incompatible implicit declaration of built-in function ‘sqrt’
-/home/dima/github/OOP/Practicks/cpp/h/Programm2_1.h:16:24: note: include ‘<math.h>’ or provide a declaration of ‘sqrt’
-/home/dima/github/OOP/Practicks/cpp/h/Programm2_1.h:16:29: warning: incompatible implicit declaration of built-in function ‘sin’
-   m = (n + a) / (-b) + sqrt(sin(a) * sin(a) - cos(n));
-                             ^
-/home/dima/github/OOP/Practicks/cpp/h/Programm2_1.h:16:29: note: include ‘<math.h>’ or provide a declaration of ‘sin’
-/home/dima/github/OOP/Practicks/cpp/h/Programm2_1.h:16:47: warning: implicit declaration of function ‘cos’ [-Wimplicit-function-declaration]
-   m = (n + a) / (-b) + sqrt(sin(a) * sin(a) - cos(n));
-                                               ^
-/home/dima/github/OOP/Practicks/cpp/h/Programm2_1.h:16:47: warning: incompatible implicit declaration of built-in function ‘cos’
-/home/dima/github/OOP/Practicks/cpp/h/Programm2_1.h:16:47: note: include ‘<math.h>’ or provide a declaration of ‘cos’
-/home/dima/github/OOP/Practicks/cpp/h/Programm2_1.h:19:16: warning: implicit declaration of function ‘tan’ [-Wimplicit-function-declaration]
-    m = b * b + tan(n * a);
-                ^
-/home/dima/github/OOP/Practicks/cpp/h/Programm2_1.h:19:16: warning: incompatible implicit declaration of built-in function ‘tan’
-/home/dima/github/OOP/Practicks/cpp/h/Programm2_1.h:19:16: note: include ‘<math.h>’ or provide a declaration of ‘tan’
-/home/dima/github/OOP/Practicks/cpp/h/Programm2_1.h:25:6: warning: implicit declaration of function ‘isnan’ [-Wimplicit-function-declaration]
-  if (isnan(m) || isnan(n) || isinf(m) || isinf(n)) {
-      ^
-/home/dima/github/OOP/Practicks/cpp/h/Programm2_1.h:25:30: warning: implicit declaration of function ‘isinf’ [-Wimplicit-function-declaration]
-  if (isnan(m) || isnan(n) || isinf(m) || isinf(n)) {
-                              ^
-/home/dima/github/OOP/Practicks/cpp/h/Programm2_1.h:26:48: error: ‘endl’ undeclared (first use in this function)
-   cout << "Нельзя посчитать" << endl;
-                                                ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm8_2.h: In function ‘Programma8_2’:
+/home/dima/github/OOP/Practicks/cpp/h/Programm8_2.h:5:3: error: unknown type name ‘ofstream’
+   ofstream fout("a.txt");
+   ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm8_2.h:5:17: error: expected declaration specifiers or ‘...’ before string constant
+   ofstream fout("a.txt");
+                 ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm8_2.h:8:3: error: ‘cin’ undeclared (first use in this function)
+   cin >> c;
+   ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm8_2.h:8:3: note: each undeclared identifier is reported only once for each function it appears in
+/home/dima/github/OOP/Practicks/cpp/h/Programm8_2.h:11:3: error: ‘fout’ undeclared (first use in this function)
+   fout << c;
+   ^
