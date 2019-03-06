@@ -13,7 +13,7 @@ void Programma2_2(){
   	}
 
   	if (z < b) {
-  		t = cbrt(z + a * a * b);
+  		t = pow(z + a * a * b, 1/3);
   	} else {
   		if (z == b) {
   			t = 1 - log10(z) + cos(a * a *b);
@@ -21,7 +21,7 @@ void Programma2_2(){
   			t = 1 / cos(z * a);
   		}
   	}
-
+    // проверка на ошибки при счете
   	if (isnan(t) || isnan(z) || isinf(z) || isinf(t)) {
   		cout << "Нельзя посчитать" << endl;
   	} else {

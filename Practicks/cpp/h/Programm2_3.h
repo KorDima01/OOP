@@ -18,10 +18,10 @@ void Programma2_3(){
   		if (y < b) {
   			t = sin(y) * sin(y) + 1 / tan(a - b);
   		} else {
-  			t = cbrt(y * sin(a)) + 1 / sqrt(y * cos(b));
+  			t = pow(y * sin(a), 1/3) + 1 / sqrt(y * cos(b));
   		}
   	}
-
+    // проверка на ошибки при счете
   	if (isnan(y) || isnan(t) || isinf(y) || isinf(t)) {
   		cout << "Нельзя посчитать" << endl;
   	} else {

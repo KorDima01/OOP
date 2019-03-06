@@ -1,13 +1,13 @@
 #ifndef Programm2_1
 #define Programm2_1
-#include <cmath>
+
 void Programma2_1(){
   double a, b, m, n;
 	cout << "Введите a и b: ";
 	cin >> a >> b;
 
 	if (a >= b) {
-		n = pow(a - b, 3);
+		n = pow(a - b, 1/3);
 	} else {
 		n = a * a + (a - b) / (sin(a * b));
 	}
@@ -21,7 +21,7 @@ void Programma2_1(){
 			m = b * b * b + n * a * a;
 		}
 	}
-
+  // проверка на ошибки при счете
 	if (isnan(m) || isnan(n) || isinf(m) || isinf(n)) {
 		cout << "Нельзя посчитать" << endl;
 	} else {

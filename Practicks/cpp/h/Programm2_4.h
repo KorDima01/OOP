@@ -21,7 +21,7 @@ void Programma2_4(){
 			t = tan(a * x) + cos(2 * a * y);
 		}
 	}
-
+  // проверка на ошибки при счете
 	if (isnan(y) || isnan(t) || isinf(y) || isinf(t)) {
 		cout << "Нельзя посчитать" << endl;
 	} else {
