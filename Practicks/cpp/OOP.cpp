@@ -1,5 +1,5 @@
 ﻿#include "Start.h"
-#include "Programms.h"
+#include "h/Programms.h"
 
 //--------------------------------------------\/-START-\/-----------------------
 int main()
@@ -24,7 +24,7 @@ int main()
             Programma1_1();
             break;
         case 2:
-//IN-CONSTRUCT            programma1_2();
+            Programma1_2();
             break;
         default:
             cout << "Нет такого задания" << "\n";

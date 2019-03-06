@@ -1,0 +1,31 @@
+#ifndef Programms
+#define Programms
+
+#include "Programm1_1.h"
+#include "Programm1_2.h"
+#include "Programm2_1.h"
+#include "Programm2_2.h"
+#include "Programm2_3.h"
+#include "Programm2_4.h"
+#include "Programm3_1.h"
+#include "Programm3_2.h"
+#include "Programm3_3.h"
+#include "Programm3_4.h"
+#include "Programm3_5.h"
+#include "Programm4_1.h"
+#include "Programm4_2.h"
+#include "Programm4_3.h"
+#include "Programm5_1.h"
+#include "Programm5_2.h"
+#include "Programm5_3.h"
+#include "Programm5_4.h"
+#include "Programm6_1.h"
+#include "Programm6_2.h"
+#include "Programm7_1.h"
+#include "Programm7_2.h"
+#include "Programm7_3.h"
+#include "Programm7_4.h"
+#include "Programm8_1.h"
+#include "Programm8_2.h"
+
+#endif

@@ -1,0 +1,11 @@
+/home/dima/github/OOP/Practicks/cpp/h/Programm1_2.h: In function ‘Programma1_2’:
+/home/dima/github/OOP/Practicks/cpp/h/Programm1_2.h:7:3: error: ‘cout’ undeclared (first use in this function)
+   cout << "Введите два числа: ";
+   ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm1_2.h:7:3: note: each undeclared identifier is reported only once for each function it appears in
+/home/dima/github/OOP/Practicks/cpp/h/Programm1_2.h:8:3: error: ‘cin’ undeclared (first use in this function)
+   cin >> a;
+   ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm1_2.h:10:32: error: ‘endl’ undeclared (first use in this function)
+   cout << "\n a+b= " << a+b << endl;
+                                ^
