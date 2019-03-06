@@ -37,16 +37,16 @@ int main()
         switch (SubNumb)
         {
         case 1:
-//IN-CONSTRUCT            programma2_1();
+            Programma2_1();
             break;
         case 2:
-//IN-CONSTRUCT            programma2_2();
+            Programma2_2();
             break;
         case 3:
-//IN-CONSTRUCT            programma2_3();
+            Programma2_3();
             break;
         case 4:
-//IN-CONSTRUCT            programma2_4();
+            Programma2_4();
             break;
         default:
             cout << "Нет такого задания" << "\n";
@@ -59,19 +59,19 @@ int main()
         switch (SubNumb)
         {
         case 1:
-//IN-CONSTRUCT            programma3_1();
+            Programma3_1();
             break;
         case 2:
-//IN-CONSTRUCT            programma3_2();
+            Programma3_2();
             break;
         case 3:
-//IN-CONSTRUCT            programma3_3();
+            Programma3_3();
             break;
         case 4:
-//IN-CONSTRUCT            programma3_4();
+            Programma3_4();
             break;
         case 5:
-//IN-CONSTRUCT            programma3_5();
+            Programma3_5();
             break;
         default:
             cout << "Нет такого задания" << "\n";
@@ -84,13 +84,13 @@ int main()
         switch (SubNumb)
         {
         case 1:
-//IN-CONSTRUCT            programma4_1();
+            Programma4_1();
             break;
         case 2:
-//IN-CONSTRUCT            programma4_2();
+            Programma4_2();
             break;
         case 3:
-//IN-CONSTRUCT            programma4_3();
+            Programma4_3();
             break;
         default:
             cout << "Нет такого задания" << "\n";
@@ -103,16 +103,16 @@ int main()
         switch (SubNumb)
         {
         case 1:
-//IN-CONSTRUCT            programma5_1();
+            Programma5_1();
             break;
         case 2:
-//IN-CONSTRUCT            programma5_2();
+            Programma5_2();
             break;
         case 3:
-//IN-CONSTRUCT            programma5_3();
+            Programma5_3();
             break;
         case 4:
-//IN-CONSTRUCT            programma5_4();
+            Programma5_4();
             break;
         default:
             cout << "Нет такого задания" << "\n";
@@ -125,10 +125,10 @@ int main()
         switch (SubNumb)
         {
         case 1:
-//IN-CONSTRUCT            programma6_1();
+            Programma6_1();
             break;
         case 2:
-//IN-CONSTRUCT            programma6_2();
+            Programma6_2();
             break;
         default:
             cout << "Нет такого задания" << "\n";
@@ -141,16 +141,16 @@ int main()
         switch (SubNumb)
         {
         case 1:
-//IN-CONSTRUCT            programma7_1();
+            Programma7_1();
             break;
         case 2:
-//IN-CONSTRUCT            programma7_2();
+            Programma7_2();
             break;
         case 3:
-//IN-CONSTRUCT            programma7_3();
+            Programma7_3();
             break;
         case 4:
-//IN-CONSTRUCT            programma7_4();
+            Programma7_4();
             break;
         default:
             cout << "Нет такого задания" << "\n";
@@ -163,10 +163,10 @@ int main()
         switch (SubNumb)
         {
         case 1:
-//IN-CONSTRUCT            programma8_1();
+            Programma8_1();
             break;
         case 2:
-//IN-CONSTRUCT            programma8_2();
+            Programma8_2();
             break;
         default:
             cout << "Нет такого задания" << "\n";
