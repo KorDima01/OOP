@@ -8,33 +8,23 @@
 class Book {
 	int pages;	// количество страниц
 	int currentPage;	//текущая страница
-	vector<string> authors;	// автор
+	string authors;	// автор
 	string title;	// название
-	string genre;	// жанр
-	string publisher;	// издатель
 public:
 	Book(); // Создаёт пустой экземпляр
 
-	Book(int, const vector<string> &, string &, const string &, const string &);
+	Book(int, const string &, string &, const string &);
 	// Создаёт экземпляр с заполненными полями
 
 	void setNumberOfPages(const int);	// Ввод количества страниц в книге
 
 	int getNumberOfPages();		// Получение количества страниц
 
-	void setAuthors(const vector<string> &);	// Ввод автора книги
+	void setAuthors(const string &);	// Ввод автора книги
 
 	void addAuthor(const string &);	// Добавление одного автора к уже существующим
 
-	vector<string> &getAuthors();	// Получение авторов книги
-
-	void setPublisher(const string &);	// Ввод издателя книги
-
-	string &getPublisher();	// Получение издателя книги
-
-	void setGenre(const string &);	// Ввод жанра
-
-	string &getGenre();	// Получение жанра
+	string &getAuthors();	// Получение авторов книги
 
 	void openPage(const int);	// Установка определённой текущей страницы
 
