@@ -6,21 +6,31 @@ class Book
 	private:
 		string name;
 		string author;
-		int edition;
 		string publisher;
-		double price;
 	public:
-		void define(string n, string a, int e, string pu, double p)//метод, изменяющий значения
+		void define(string na, string au, string pub)//Изменяющий значения
 		{
-			name = n;
-			author = a;
-			edition = e;
-			publisher = pu;
-			price = p;
+			name = na;
+			author = au;
+			publisher = pub;
 		}
-		void display(void)//метод, отображающий значения
+		void display(void)//Отображающий значения
 		{
-			cout << "Название: " << name << "; Автор: " << author << "; Издание: " << edition << "; Издательсво: " << publisher << "; Цена: " << price << endl;
+			cout << "Название: " << name << "; Автор: " << author << "; Издательсво: " << publisher << endl;
 		}
 };
+Book book;
+string na;
+string au;
+string pub;
+void Programma3_1(){
+  cout << "Введите название" << endl;
+  cin >> na;
+  cout << "Введите автора" << endl;
+  cin >> au;
+  cout << "Введите издательство" << endl;
+  cin >> pub;
+  book.define(na,au,pub);
+  book.display();
+}
 #endif

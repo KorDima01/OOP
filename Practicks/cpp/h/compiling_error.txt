@@ -1,44 +1,108 @@
-/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:4:1: error: unknown type name ‘class’
- class Book//определение класса
- ^
-/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:5:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
- {
- ^
-/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h: In function ‘main’:
-/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:28:2: warning: implicit declaration of function ‘setlocale’ [-Wimplicit-function-declaration]
-  setlocale(0,"rus");//вывод на русском
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:7:3: error: ‘string’ does not name a type
+   string name;//поле имени
+   ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:8:3: error: ‘string’ does not name a type
+   string surname;//поле фамилии
+   ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:9:3: error: ‘string’ does not name a type
+   string midname;//поле отчества
+   ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:12:15: error: ‘string’ has not been declared
+   void define(string n, string s, string m, int ma[5])//Изменяющий значения
+               ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:12:25: error: ‘string’ has not been declared
+   void define(string n, string s, string m, int ma[5])//Изменяющий значения
+                         ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:12:35: error: ‘string’ has not been declared
+   void define(string n, string s, string m, int ma[5])//Изменяющий значения
+                                   ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h: In member function ‘void Student::define(int, int, int, int*)’:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:14:4: error: ‘name’ was not declared in this scope
+    name = n;
+    ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:15:4: error: ‘surname’ was not declared in this scope
+    surname = s;
+    ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:16:4: error: ‘midname’ was not declared in this scope
+    midname = m;
+    ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h: In member function ‘void Student::display()’:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:22:4: error: ‘cout’ was not declared in this scope
+    cout << "Имя: " << name << "; Фамилия: " << surname << "; Отчество: " << midname << "; Оценки: " << endl;
+    ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:22:26: error: ‘name’ was not declared in this scope
+    cout << "Имя: " << name << "; Фамилия: " << surname << "; Отчество: " << midname << "; Оценки: " << endl;
+                          ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:22:58: error: ‘surname’ was not declared in this scope
+    cout << "Имя: " << name << "; Фамилия: " << surname << "; Отчество: " << midname << "; Оценки: " << endl;
+                                                          ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:22:95: error: ‘midname’ was not declared in this scope
+    cout << "Имя: " << name << "; Фамилия: " << surname << "; Отчество: " << midname << "; Оценки: " << endl;
+                                                                                               ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:22:128: error: ‘endl’ was not declared in this scope
+    cout << "Имя: " << name << "; Фамилия: " << surname << "; Отчество: " << midname << "; Оценки: " << endl;
+                                                                                                                                ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h: At global scope:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:30:3: error: ‘string’ does not name a type
+   string name;//название группы
+   ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:34:15: error: ‘string’ has not been declared
+   void define(string n, int num)
+               ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h: In member function ‘void Group_S::define(int, int)’:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:36:4: error: ‘name’ was not declared in this scope
+    name = n;
+    ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:39:4: error: ‘string’ was not declared in this scope
+    string na, s, m;
+    ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:44:5: error: ‘cin’ was not declared in this scope
+     cin.ignore();
+     ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:45:5: error: ‘cout’ was not declared in this scope
+     cout << "Введите имя студента" << endl;
+     ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:45:57: error: ‘endl’ was not declared in this scope
+     cout << "Введите имя студента" << endl;
+                                                         ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:46:17: error: ‘na’ was not declared in this scope
+     getline(cin,na);
+                 ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:46:19: error: ‘getline’ was not declared in this scope
+     getline(cin,na);
+                   ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:48:18: error: ‘s’ was not declared in this scope
+     getline(cin, s);
+                  ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:50:18: error: ‘m’ was not declared in this scope
+     getline(cin, m);
+                  ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h: In member function ‘void Group_S::display()’:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:58:5: error: ‘cout’ was not declared in this scope
+     cout << "Название: " << name << "; Количество студентов: " << number << endl;
+     ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:58:37: error: ‘name’ was not declared in this scope
+     cout << "Название: " << name << "; Количество студентов: " << number << endl;
+                                     ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:58:104: error: ‘endl’ was not declared in this scope
+     cout << "Название: " << name << "; Количество студентов: " << number << endl;
+                                                                                                        ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h: In function ‘void Programma3_2()’:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:73:2: error: ‘string’ was not declared in this scope
+  string n;
   ^
-/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:29:2: warning: implicit declaration of function ‘SetConsoleCP’ [-Wimplicit-function-declaration]
-  SetConsoleCP(1251);
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:75:2: error: ‘cout’ was not declared in this scope
+  cout << "Введите название группы" << endl;
   ^
-/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:30:2: warning: implicit declaration of function ‘SetConsoleOutputCP’ [-Wimplicit-function-declaration]
-  SetConsoleOutputCP(1251);//ввод на русском
-  ^
-/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:31:2: error: unknown type name ‘Book’
-  Book b;//определение объекта класса Book
-  ^
-/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:32:2: error: unknown type name ‘string’
-  string n, a, pu;
-  ^
-/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:35:2: error: ‘cout’ undeclared (first use in this function)
-  cout << "Введите название" << endl;
-  ^
-/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:35:2: note: each undeclared identifier is reported only once for each function it appears in
-/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:35:47: error: ‘endl’ undeclared (first use in this function)
-  cout << "Введите название" << endl;
-                                               ^
-/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:36:2: warning: implicit declaration of function ‘getline’ [-Wimplicit-function-declaration]
-  getline(cin,n);
-  ^
-/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:36:10: error: ‘cin’ undeclared (first use in this function)
-  getline(cin,n);
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:75:60: error: ‘endl’ was not declared in this scope
+  cout << "Введите название группы" << endl;
+                                                            ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:76:10: error: ‘cin’ was not declared in this scope
+  getline(cin, n);
           ^
-/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:45:3: error: request for member ‘define’ in something not a structure or union
-  b.define(n,a,e,pu,p);//вызов метода define()
-   ^
-/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:46:3: error: request for member ‘display’ in something not a structure or union
-  b.display();//вызов метода display
-   ^
-/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:47:2: warning: implicit declaration of function ‘system’ [-Wimplicit-function-declaration]
-  system("pause");
-  ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:76:15: error: ‘n’ was not declared in this scope
+  getline(cin, n);
+               ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:76:16: error: ‘getline’ was not declared in this scope
+  getline(cin, n);
+                ^
