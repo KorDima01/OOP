@@ -9,6 +9,12 @@ int main()
     cout << "\x1B[2J\x1B[H"; // console clear for *nix version
     int Numb = 0;
     int SubNumb = 0;
+    Book b;
+    string n;
+    string a;
+    string pu;
+    int e;
+    double p;
     cout << "Введите номер практической: ";
     cin >> Numb;
     cout << "Введите номер варианта задания: ";
@@ -59,13 +65,7 @@ int main()
         switch (SubNumb)
         {
         case 1:
-            {
-            Book b;
-            string n;
-            string a;
-            string pu;
-            int e;
-            double p;
+
             cout << "Введите название" << endl;
             getline(cin,n);
             cout << "Введите автора" << endl;
@@ -79,7 +79,6 @@ int main()
             b.define(n,a,e,pu,p);
             b.display();
             break;
-        }
         case 2:
             Programma3_2();
             break;
