@@ -1,0 +1,134 @@
+In file included from /home/dima/github/OOP/Practicks/cpp/h/Programms.h:12:0,
+                 from /home/dima/github/OOP/Practicks/cpp/OOP.cpp:2:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_3.h:24:16: error: redefinition of ‘std::__cxx11::string n’
+   string b,m,c,n;
+                ^
+In file included from /home/dima/github/OOP/Practicks/cpp/h/Programms.h:11:0,
+                 from /home/dima/github/OOP/Practicks/cpp/OOP.cpp:2:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:71:10: note: ‘std::__cxx11::string n’ previously declared here
+   string n;
+          ^
+In file included from /home/dima/github/OOP/Practicks/cpp/h/Programms.h:13:0,
+                 from /home/dima/github/OOP/Practicks/cpp/OOP.cpp:2:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_4.h:55:9: error: conflicting declaration ‘Point b’
+   Point b,e;
+         ^
+In file included from /home/dima/github/OOP/Practicks/cpp/h/Programms.h:12:0,
+                 from /home/dima/github/OOP/Practicks/cpp/OOP.cpp:2:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_3.h:24:10: note: previous declaration as ‘std::__cxx11::string b’
+   string b,m,c,n;
+          ^
+In file included from /home/dima/github/OOP/Practicks/cpp/h/Programms.h:13:0,
+                 from /home/dima/github/OOP/Practicks/cpp/OOP.cpp:2:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_4.h: In function ‘void Programma3_4()’:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_4.h:60:6: error: ‘std::__cxx11::string {aka class std::__cxx11::basic_string<char>}’ has no member named ‘set’
+    b.set(x, y, z);
+      ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_4.h:65:16: error: no matching function for call to ‘Vector::define(std::__cxx11::string&, Point&)’
+    v.define(b,e);//вызов метода define()
+                ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_4.h:39:8: note: candidate: void Vector::define(Point, Point)
+   void define(Point b, Point e)//метод класса, изменяющий значения полей
+        ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_4.h:39:8: note:   no known conversion for argument 1 from ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ to ‘Point’
+In file included from /home/dima/github/OOP/Practicks/cpp/h/Programms.h:14:0,
+                 from /home/dima/github/OOP/Practicks/cpp/OOP.cpp:2:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_5.h: At global scope:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_5.h:3:7: error: redefinition of ‘class Book’
+ class Book//определение класса
+       ^
+In file included from /home/dima/github/OOP/Practicks/cpp/h/Programms.h:10:0,
+                 from /home/dima/github/OOP/Practicks/cpp/OOP.cpp:2:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:4:7: error: previous definition of ‘class Book’
+ class Book
+       ^
+In file included from /home/dima/github/OOP/Practicks/cpp/h/Programms.h:14:0,
+                 from /home/dima/github/OOP/Practicks/cpp/OOP.cpp:2:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_5.h: In member function ‘void Library::define(std::__cxx11::string, std::__cxx11::string, int)’:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_5.h:55:37: error: no matching function for call to ‘Book::define(std::__cxx11::string&, std::__cxx11::string&, int&, std::__cxx11::string&, double&)’
+     books[i].define(na, au, e, pu, p);
+                                     ^
+In file included from /home/dima/github/OOP/Practicks/cpp/h/Programms.h:10:0,
+                 from /home/dima/github/OOP/Practicks/cpp/OOP.cpp:2:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:11:8: note: candidate: void Book::define(std::__cxx11::string, std::__cxx11::string, std::__cxx11::string)
+   void define(string na, string au, string pub)//Изменяющий значения
+        ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:11:8: note:   candidate expects 3 arguments, 5 provided
+In file included from /home/dima/github/OOP/Practicks/cpp/h/Programms.h:14:0,
+                 from /home/dima/github/OOP/Practicks/cpp/OOP.cpp:2:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_5.h: At global scope:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_5.h:74:10: error: redefinition of ‘std::__cxx11::string n’
+   string n, a;
+          ^
+In file included from /home/dima/github/OOP/Practicks/cpp/h/Programms.h:11:0,
+                 from /home/dima/github/OOP/Practicks/cpp/OOP.cpp:2:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:71:10: note: ‘std::__cxx11::string n’ previously declared here
+   string n;
+          ^
+In file included from /home/dima/github/OOP/Practicks/cpp/h/Programms.h:14:0,
+                 from /home/dima/github/OOP/Practicks/cpp/OOP.cpp:2:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_5.h:74:13: error: conflicting declaration ‘std::__cxx11::string a’
+   string n, a;
+             ^
+In file included from /home/dima/github/OOP/Practicks/cpp/h/Programms.h:12:0,
+                 from /home/dima/github/OOP/Practicks/cpp/OOP.cpp:2:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_3.h:23:6: note: previous declaration as ‘Auto a’
+ Auto a;//определение объекта класса Auto
+      ^
+In file included from /home/dima/github/OOP/Practicks/cpp/h/Programms.h:14:0,
+                 from /home/dima/github/OOP/Practicks/cpp/OOP.cpp:2:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_5.h:75:7: error: redefinition of ‘int num’
+   int num;
+       ^
+In file included from /home/dima/github/OOP/Practicks/cpp/h/Programms.h:11:0,
+                 from /home/dima/github/OOP/Practicks/cpp/OOP.cpp:2:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_2.h:72:7: note: ‘int num’ previously declared here
+   int num;
+       ^
+In file included from /home/dima/github/OOP/Practicks/cpp/h/Programms.h:14:0,
+                 from /home/dima/github/OOP/Practicks/cpp/OOP.cpp:2:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_5.h: In function ‘void Programma3_5()’:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_5.h:81:18: error: no matching function for call to ‘getline(std::istream&, Auto&)’
+    getline(cin, a);
+                  ^
+In file included from /usr/include/c++/5/string:53:0,
+                 from /usr/include/c++/5/bits/locale_classes.h:40,
+                 from /usr/include/c++/5/bits/ios_base.h:41,
+                 from /usr/include/c++/5/ios:42,
+                 from /usr/include/c++/5/ostream:38,
+                 from /usr/include/c++/5/iostream:39,
+                 from /home/dima/github/OOP/Practicks/cpp/Start.h:4,
+                 from /home/dima/github/OOP/Practicks/cpp/OOP.cpp:1:
+/usr/include/c++/5/bits/basic_string.tcc:1513:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+     getline(basic_istream<_CharT, _Traits>& __in,
+     ^
+/usr/include/c++/5/bits/basic_string.tcc:1513:5: note:   template argument deduction/substitution failed:
+In file included from /home/dima/github/OOP/Practicks/cpp/h/Programms.h:14:0,
+                 from /home/dima/github/OOP/Practicks/cpp/OOP.cpp:2:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_5.h:81:18: note:   ‘Auto’ is not derived from ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+    getline(cin, a);
+                  ^
+In file included from /usr/include/c++/5/string:52:0,
+                 from /usr/include/c++/5/bits/locale_classes.h:40,
+                 from /usr/include/c++/5/bits/ios_base.h:41,
+                 from /usr/include/c++/5/ios:42,
+                 from /usr/include/c++/5/ostream:38,
+                 from /usr/include/c++/5/iostream:39,
+                 from /home/dima/github/OOP/Practicks/cpp/Start.h:4,
+                 from /home/dima/github/OOP/Practicks/cpp/OOP.cpp:1:
+/usr/include/c++/5/bits/basic_string.h:5212:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     getline(basic_istream<_CharT, _Traits>& __is,
+     ^
+/usr/include/c++/5/bits/basic_string.h:5212:5: note:   template argument deduction/substitution failed:
+In file included from /home/dima/github/OOP/Practicks/cpp/h/Programms.h:14:0,
+                 from /home/dima/github/OOP/Practicks/cpp/OOP.cpp:2:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_5.h:81:18: note:   ‘Auto’ is not derived from ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+    getline(cin, a);
+                  ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_5.h:85:20: error: no matching function for call to ‘Library::define(std::__cxx11::string&, Auto&, int&)’
+    l.define(n,a,num);//вызов метода define()
+                    ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_5.h:33:8: note: candidate: void Library::define(std::__cxx11::string, std::__cxx11::string, int)
+   void define(string n, string a, int num)//метод класса, изменяющий значения полей
+        ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_5.h:33:8: note:   no known conversion for argument 2 from ‘Auto’ to ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’
