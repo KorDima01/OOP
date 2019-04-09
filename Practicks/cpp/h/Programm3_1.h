@@ -1,86 +1,50 @@
 #ifndef Programm3_1
 #define Programm3_1
-   
-#include "Book.h"
 
-
-  Book::Book() {
-  	this->pages = 0;
-  	this->currentPage = 0;
-  	this->author.clear();
-  }
-
-  Book::Book(int pages, string &author, string &title) {
-  	this->pages = pages;
-  	if (this->pages) {
-  		this->currentPage = 1;
-  	} else {
-  		this->currentPage = 1;
-  	}
-  	this->author = author;
-  	this->title = title;
-  }
-
-  void Book::setAuthor(const string &author) {
-  	this->author = author;
-  }
-
-  string &Book::getAuthor() {
-  	if(!author.size()) {
-  		cout << "Нет автора." << endl;
-  	}
-  	return author;
-  }
-
-  void Book::setNumberOfPages(const int pages) {
-  	this->pages = pages;
-  	if (pages) {
-  		currentPage = 1;
-  	} else {
-  		currentPage = 0;
-  	}
-
-  }
-
-  int Book::getNumberOfPages() {
-  	return pages;
-  }
-
-  void Book::openPage(const int page) {
-  	if (page <= pages) {
-  		currentPage = page;
-  	} else {
-  		cout << "В книге нет страницы с номером: #" << page << endl;
-  	}
-  }
-
-  void Book::nextPage()
-  	if (currentPage == pages) {
-  		cout << "Нельзя открыть следующую страницу, т.к. это последняя страница." << endl;
-  	} else {
-  		currentPage++;
-  	}
-  }
-
-  int Book::getCurrentPage() {
-  	return currentPage;
-  }
-
-  void Book::setTitle(const string &title) {
-  	this->title = title;
-  }
-
-  string &Book::getTitle() {
-  	if (!title.size()) {
-  		cout << "У книги нет названия." << endl;
-  	}
-  	return title;
-  }
-
-  Book::~Book() {
-  	author.clear();
-  }
-  void Programma3_1(){
+class Book//определение класса
+{
+	private:
+		string name;//поле класса для названия
+		string author;//поле класса для автора
+		int edition;//поле класса для издания
+		string publisher;//поле класса для издательство
+		double price;//поле класса для цены
+	public:
+		void define(string n, string a, int e, string pu, double p)//метод класса, изменяющий значения полей
+		{
+			name = n;
+			author = a;
+			edition = e;
+			publisher = pu;
+			price = p;
+		}
+		void display(void)//метод класса, отображающий значения полей
+		{
+			cout << "Название: " << name << "; Автор: " << author << "; Издание: " << edition << "; Издательсво: " << publisher << "; Цена: " << price << endl;
+		}
+};
+int main()
+{
+	setlocale(0,"rus");//вывод на русском
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);//ввод на русском
+	Book b;//определение объекта класса Book
+	string n, a, pu;
+	int e;
+	double p;
+	cout << "Введите название" << endl;
+	getline(cin,n);
+	cout << "Введите автора" << endl;
+	getline(cin, a);
+	cout << "Введите издательство" << endl;
+	getline(cin, pu);
+	cout << "Введите издание" << endl;
+	cin >> e;
+	cout << "Введите цену" << endl;
+	cin >> p;
+	b.define(n,a,e,pu,p);//вызов метода define()
+	b.display();//вызов метода display
+	system("pause");
+	return 0;
 }
-
 #endif

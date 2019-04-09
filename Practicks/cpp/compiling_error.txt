@@ -1,0 +1,6 @@
+In file included from /home/dima/github/OOP/Practicks/cpp/h/Programms.h:10:0,
+                 from /home/dima/github/OOP/Practicks/cpp/OOP.cpp:2:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:4:18: fatal error: Book.h: Нет такого файла или каталога
+ #include "Book.h"
+                  ^
+compilation terminated.

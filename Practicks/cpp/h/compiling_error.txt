@@ -1,14 +1,44 @@
-/home/dima/github/OOP/Practicks/cpp/h/Programm8_2.h: In function ‘Programma8_2’:
-/home/dima/github/OOP/Practicks/cpp/h/Programm8_2.h:5:3: error: unknown type name ‘ofstream’
-   ofstream fout("a.txt");
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:4:1: error: unknown type name ‘class’
+ class Book//определение класса
+ ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:5:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ {
+ ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h: In function ‘main’:
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:28:2: warning: implicit declaration of function ‘setlocale’ [-Wimplicit-function-declaration]
+  setlocale(0,"rus");//вывод на русском
+  ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:29:2: warning: implicit declaration of function ‘SetConsoleCP’ [-Wimplicit-function-declaration]
+  SetConsoleCP(1251);
+  ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:30:2: warning: implicit declaration of function ‘SetConsoleOutputCP’ [-Wimplicit-function-declaration]
+  SetConsoleOutputCP(1251);//ввод на русском
+  ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:31:2: error: unknown type name ‘Book’
+  Book b;//определение объекта класса Book
+  ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:32:2: error: unknown type name ‘string’
+  string n, a, pu;
+  ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:35:2: error: ‘cout’ undeclared (first use in this function)
+  cout << "Введите название" << endl;
+  ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:35:2: note: each undeclared identifier is reported only once for each function it appears in
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:35:47: error: ‘endl’ undeclared (first use in this function)
+  cout << "Введите название" << endl;
+                                               ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:36:2: warning: implicit declaration of function ‘getline’ [-Wimplicit-function-declaration]
+  getline(cin,n);
+  ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:36:10: error: ‘cin’ undeclared (first use in this function)
+  getline(cin,n);
+          ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:45:3: error: request for member ‘define’ in something not a structure or union
+  b.define(n,a,e,pu,p);//вызов метода define()
    ^
-/home/dima/github/OOP/Practicks/cpp/h/Programm8_2.h:5:17: error: expected declaration specifiers or ‘...’ before string constant
-   ofstream fout("a.txt");
-                 ^
-/home/dima/github/OOP/Practicks/cpp/h/Programm8_2.h:8:3: error: ‘cin’ undeclared (first use in this function)
-   cin >> c;
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:46:3: error: request for member ‘display’ in something not a structure or union
+  b.display();//вызов метода display
    ^
-/home/dima/github/OOP/Practicks/cpp/h/Programm8_2.h:8:3: note: each undeclared identifier is reported only once for each function it appears in
-/home/dima/github/OOP/Practicks/cpp/h/Programm8_2.h:11:3: error: ‘fout’ undeclared (first use in this function)
-   fout << c;
-   ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm3_1.h:47:2: warning: implicit declaration of function ‘system’ [-Wimplicit-function-declaration]
+  system("pause");
+  ^
