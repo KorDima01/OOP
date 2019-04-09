@@ -67,11 +67,11 @@ class Group_S
 			delete []st;
 		}
 };
-
+Group_S Group;
+  string n;
+  int num;
 void Programma3_2(){
-  Group_S Group;
-	string n;
-	int num;
+
 	cout << "Введите название группы" << endl;
 	cin >> n;
 	cout << "Введите количество студентов" << endl;
