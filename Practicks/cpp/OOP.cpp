@@ -65,7 +65,6 @@ int main()
         switch (SubNumb)
         {
         case 1:
-
             cout << "Введите название" << endl;
             getline(cin,n);
             cout << "Введите автора" << endl;
