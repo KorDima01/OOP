@@ -63,16 +63,16 @@ int main()
             Programma3_1();
             break;
         case 2:
-            Programma3_2();
+            // Programma3_2();
             break;
         case 3:
-            Programma3_3();
+            // Programma3_3();
             break;
         case 4:
-            Programma3_4();
+            // Programma3_4();
             break;
         case 5:
-            Programma3_5();
+            // Programma3_5();
             break;
         default:
             cout << "Нет такого задания" << "\n";
