@@ -1,88 +1,84 @@
 #ifndef Programm3_5
 #define Programm3_5
-class Book//определение класса
+class Bookk//определение класса
 {
 private:
-	string name;//поле класса для названия
-	string author;//поле класса для автора
-	int edition;//поле класса для издания
-	string publisher;//поле класса для издательство
-	double price;//поле класса для цены
+	string name;//поле названия
+	string author;//поле aвтора
+	string publisher;//поле издательствa
+	double price;//поле цены
 public:
-	void define(string n, string a, int e, string pu, double p)//метод класса, изменяющий значения полей
+	void define(string nnn, string aa, string pu, double p)//метод, изменяющий значения
 	{
-		name = n;
-		author = a;
-		edition = e;
+		name = nnn;
+		author = aa;
 		publisher = pu;
 		price = p;
 	}
-	void display(void)//метод класса, отображающий значения полей
+	void display(void)//метод, отображающий значения
 	{
-		cout << "Название: " << name << "; Автор: " << author << "; Издание: " << edition << "; Издательсво: " << publisher << "; Цена: " << price << endl;
+		cout << "Название: " << name << "; Автор: " << author << "; Издательсво: " << publisher << "; Цена: " << price << endl;
 	}
 };
-class Library//определение класса
+class Library
 {
 	private:
-		string name;//поле класса для названия
-		string address;//поле класса для адреса
-		int number;//поле класса для колиства книг
-		Book *books;//поле класса для книг
+		string name;//поле названия
+		string address;//поле адреса
+		int number;//поле колиства книг
+		Bookk *bookks;//поле книг
 	public:
-		void define(string n, string a, int num)//метод класса, изменяющий значения полей
+		void define(string nnn, string aa, int numm)//метод, изменяющий значения
 		{
-			name = n;
-			address = a;
-			number = num;
-			books = new Book[num];
+			name = nnn;
+			address = aa;
+			number = numm;
+			bookks = new Bookk[numm];
 			string na, au, pu;
 			int e;
 			double p;
-			for (int i = 0; i < num; i++)
+			for (int i = 0; i < numm; i++)
 			{
 				cin.ignore();
 				cout << "Введите название" << endl;
-				getline(cin, na);
+				cin >> na;
 				cout << "Введите автора" << endl;
-				getline(cin, au);
+				cin >> au;
 				cout << "Введите издательство" << endl;
-				getline(cin, pu);
-				cout << "Введите издание" << endl;
-				cin >> e;
+				cin >> pu;
 				cout << "Введите цену" << endl;
 				cin >> p;
-				books[i].define(na, au, e, pu, p);
+				bookks[i].define(na, au, pu, p);
 			}
 
 		}
-		void display(void)//метод класса, отображающий значения полей
+		void display(void)//метод, отображающий значения
 		{
 				cout << "Название: " << name << "; Адрес: " << address << "; Количество книг: " << number << endl;
 				for (int i = 0; i < number; i++)
 				{
-					books[i].display();
+					bookks[i].display();
 					cout << endl;
 				}
 		}
 		void delete_b(void)//метод удаление массива
 		{
-			delete []books;
+			delete []bookks;
 		}
 };
 Library l;//определение объекта класса Library
-  string n, a;
-  int num;
+  string nnn, aa;
+  int numm;
 void Programma3_5(){
 
   	cout << "Введите название" << endl;
-  	getline(cin, n);
+  	cin >> nnn;
   	cout << "Введите адрес" << endl;
-  	getline(cin, a);
+  	cin >> aa;
   	cout << "Введите количество книг" << endl;
-  	cin >> num;
+  	cin >> numm;
 
-  	l.define(n,a,num);//вызов метода define()
+  	l.define(nnn,aa,numm);//вызов метода define()
   	l.display();//вызов метода display
   	l.delete_b();
 }

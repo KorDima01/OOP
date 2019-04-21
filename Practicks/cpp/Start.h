@@ -8,5 +8,6 @@
 #include <cmath>
 
 using namespace std;
+#include "h/Programms.h"
 
 #endif
