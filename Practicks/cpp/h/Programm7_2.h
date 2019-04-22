@@ -1,76 +1,52 @@
 #ifndef Programm7_2
 #define Programm7_2
-class Figure {	// Базовый абстрактный класс "Фигура"
-protected:
-	int vertices;	// Количество вершин
-public:
-	Figure(int vertices) { this->vertices = vertices; }
-
-	virtual double getSquare() = 0;	// Виртуальный метод, считающий площадь
+class Shape// абстрактный класс фигура
+{
+	protected:
+		double s;
+	public:
+		virtual double square() = 0;
 };
-
-class Quadrilateral : public Figure{	// Абстрактный класс "Четырёхугольник"
-protected:
-	vector<double> x;	// х составляющая координат точек
-	vector<double> y;	// у составляющая координат точек
-public:
-	Quadrilateral(vector<double>&, vector<double>&);
-
-	virtual double getSquare() = 0;
+class Quadrilateral : Shape // абстрактный класс четырехугольник
+{
+	protected:
+		double a, b;
+	public:
+		Quadrilateral(double a1, double a2)
+		{
+			a = a1;
+			b = a2;
+		};
 };
-
-class Rhombus : public Quadrilateral {	// Класс "Ромб"
+class Rhombus : Quadrilateral//подкласс ромб
+{
+	private:
+		double sn;
+	public:
+		Rhombus(double a1, double a2, double s) : Quadrilateral(a1, a2) { sn = s; };
+		double square()
+		{
+			return a*b*sin(sn*3.14 / 180);
+		}
+};
+class Rectangle : Quadrilateral//подкласс прямоугольник
+{
 public:
-	Rhombus(vector<double> &x, vector<double> &y) :	Quadrilateral(x, y) {}
-
-	double getSquare();	// Определённый метод для подсчёта площади фигуры
-
-	~Rhombus() {
+	Rectangle(double a1, double a2) : Quadrilateral(a1, a2) {};
+	double square()
+	{
+		return a*b;
 	}
 };
-
-class Rectangle : public Quadrilateral {	// Класс "Прямоугольник"
-public:
-	Rectangle(vector<double> &x, vector<double> &y) : Quadrilateral(x, y) {}
-
-	double getSquare();	// Определённый метод для подсчёта площади фигуры
-
-	~Rectangle() {}
-};
 void Programma7_2(){
-  vector<double> x1(4);
-  	vector<double> y1(4);
-
-  	vector<double> x2(4);
-  	vector<double> y2(4);
-
-  	for (int i = 0; i < 4; i++) {
-  		cout << "Enter rhombus vertex " << i + 1 << ": ";
-  		cin >> x1[i] >> y1[i];
-  	}
-  	for (int i = 0; i < 4; i++) {
-  		cout << "Enter rectangle vertex " << i + 1 << ": ";
-  		cin >> x2[i] >> y2[i];
-  	}
-
-  	Rhombus r(x1, y1);
-  	Rectangle rect(x2, y2);
-  	cout << "Rhombus square: " << r.getSquare() << endl;
-  	cout << "Rectangle square: " << rect.getSquare() << endl;
-}
-
-Quadrilateral::Quadrilateral(vector<double> &x, vector<double> &y) : Figure(4) {
-	this->x = x;
-	this->y = y;
-}
-
-double Rhombus::getSquare() {
-	return sqrt((x[0] - x[2]) * (x[0] - x[2]) + (y[0] - y[2]) * (y[0] - y[2])) *
-			sqrt((x[1] - x[3]) * (x[1] - x[3]) + (y[1] - y[3]) * (y[1] - y[3])) / 2;
-}
-
-double Rectangle::getSquare() {
-	return sqrt((x[0] - x[1]) * (x[0] - x[1]) + (y[0] - y[1]) * (y[0] - y[1])) *
-				sqrt((x[2] - x[3]) * (x[2] - x[3]) + (y[2] - y[3]) * (y[2] - y[3]));
+  double a, b;
+  	cout << "Введите сторону а затем угол ромба" << endl;
+  	cin >> a >> b;
+  	Rhombus rh(a, a, b);
+  	cout << "Ввдите стороны прямоугольника" << endl;
+  	cin >> a >> b;
+  	Rectangle re(a, b);
+  	cout << "Площадь ромба: " << rh.square() << endl;
+  	cout << "Площадь рямоугольника: " << re.square() << endl;
 }
 #endif

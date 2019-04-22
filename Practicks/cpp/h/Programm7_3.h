@@ -20,14 +20,14 @@ public:
 	void beep() { cout <<  this->wheels; }
 };
 
-class Bus : public Transport {	// Производный класс Собака
+class Bus : public Transport {
 public:
 	Bus(int wheels) : Transport(wheels) {}
 
 	void beep() { cout << this->wheels; }
 };
 
-class Bicycle : public Transport {	// Производный класс Попугай
+class Bicycle : public Transport {
 public:
 	Bicycle(int wheels) : Transport(wheels) {}
 
@@ -36,7 +36,7 @@ public:
 
 void Programma7_3(){
 	Carr ca(4);
-	Bus bu(4);
+	Bus bu(6);
 	Bicycle bi(2);
 cout << "Bus has ";
 bu.beep();
