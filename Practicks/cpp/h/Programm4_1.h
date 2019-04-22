@@ -10,7 +10,7 @@ void deleteArray(double *, int);	// Удаляет массив
 void Programma4_1(){
   srand(time(NULL));
 	int size;
-	cout << "Введите размер массива, чтобы выйти из программы введите число (< 1): ";
+	cout << "Введите размер массива, чтобы выйти из программы введите число (< 1):  ";
 	cin >> size;
 
 	while (size > 0) {
@@ -19,7 +19,7 @@ void Programma4_1(){
 		printArray(arr, size);
 		deleteArray(arr, size);
 
-		cout << "Введите размер массива, чтобы выйти из программы введите число (< 1): ";
+		cout << "Введите размер массива, чтобы выйти из программы введите число (< 1):  ";
 		cin >> size;
     cout << endl;
 	}
