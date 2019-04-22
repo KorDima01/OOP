@@ -1,0 +1,45 @@
+/home/dima/github/OOP/Practicks/cpp/h/Programm4_1.h: In function ‘Programma4_1’:
+/home/dima/github/OOP/Practicks/cpp/h/Programm4_1.h:11:3: warning: implicit declaration of function ‘srand’ [-Wimplicit-function-declaration]
+   srand(time(NULL));
+   ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm4_1.h:11:9: warning: implicit declaration of function ‘time’ [-Wimplicit-function-declaration]
+   srand(time(NULL));
+         ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm4_1.h:11:14: error: ‘NULL’ undeclared (first use in this function)
+   srand(time(NULL));
+              ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm4_1.h:11:14: note: each undeclared identifier is reported only once for each function it appears in
+/home/dima/github/OOP/Practicks/cpp/h/Programm4_1.h:13:2: error: ‘cout’ undeclared (first use in this function)
+  cout << "Введите размер массива, чтобы выйти из программы введите число (< 1): ";
+  ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm4_1.h:14:2: error: ‘cin’ undeclared (first use in this function)
+  cin >> size;
+  ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm4_1.h:24:13: error: ‘endl’ undeclared (first use in this function)
+     cout << endl;
+             ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm4_1.h: In function ‘createArray’:
+/home/dima/github/OOP/Practicks/cpp/h/Programm4_1.h:28:9: error: ‘new’ undeclared (first use in this function)
+  return new double[size];
+         ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm4_1.h:28:13: error: expected ‘;’ before ‘double’
+  return new double[size];
+             ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm4_1.h: In function ‘fillArray’:
+/home/dima/github/OOP/Practicks/cpp/h/Programm4_1.h:33:12: warning: implicit declaration of function ‘rand’ [-Wimplicit-function-declaration]
+   arr[i] = rand() % 100;
+            ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm4_1.h: In function ‘printArray’:
+/home/dima/github/OOP/Practicks/cpp/h/Programm4_1.h:38:2: error: ‘cout’ undeclared (first use in this function)
+  cout << "Array: ";
+  ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm4_1.h:42:10: error: ‘endl’ undeclared (first use in this function)
+  cout << endl;
+          ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm4_1.h: In function ‘deleteArray’:
+/home/dima/github/OOP/Practicks/cpp/h/Programm4_1.h:46:2: error: ‘delete’ undeclared (first use in this function)
+  delete [] arr;
+  ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm4_1.h:46:10: error: expected expression before ‘]’ token
+  delete [] arr;
+          ^

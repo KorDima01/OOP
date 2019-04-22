@@ -71,7 +71,7 @@ int main()
             Programma3_4();
             break;
         case 5:
-            Programma3_5();
+             Programma3_5();
             break;
         default:
             cout << "Нет такого задания" << "\n";
