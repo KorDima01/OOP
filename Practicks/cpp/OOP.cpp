@@ -3,8 +3,9 @@
 //--------------------------------------------\/-START-\/-----------------------
 int main()
 {
-    Nachalo:
-    switchNumb:
+bool nachalo=true;
+while(nachalo!=false){
+
     cout << "\x1B[2J\x1B[H"; // console clear for *nix version
     int Numb = 0;
     int SubNumb = 0;
@@ -28,7 +29,7 @@ int main()
             break;
         default:
             cout << "Нет такого задания" << "\n";
-            goto switchNumb;
+
             break;
         }
         break;
@@ -50,7 +51,7 @@ int main()
             break;
         default:
             cout << "Нет такого задания" << "\n";
-            goto switchNumb;
+
             break;
         }
         break;
@@ -75,7 +76,7 @@ int main()
             break;
         default:
             cout << "Нет такого задания" << "\n";
-            goto switchNumb;
+
             break;
         }
         break;
@@ -94,7 +95,7 @@ int main()
             break;
         default:
             cout << "Нет такого задания" << "\n";
-            goto switchNumb;
+
             break;
         }
         break;
@@ -116,7 +117,7 @@ int main()
             break;
         default:
             cout << "Нет такого задания" << "\n";
-            goto switchNumb;
+
             break;
         }
         break;
@@ -132,7 +133,7 @@ int main()
             break;
         default:
             cout << "Нет такого задания" << "\n";
-            goto switchNumb;
+
             break;
         }
         break;
@@ -154,7 +155,7 @@ int main()
             break;
         default:
             cout << "Нет такого задания" << "\n";
-            goto switchNumb;
+
             break;
         }
         break;
@@ -170,13 +171,13 @@ int main()
             break;
         default:
             cout << "Нет такого задания" << "\n";
-            goto switchNumb;
+
             break;
         }
         break;
     default:
         cout << "Нет такого задания" << "\n";
-        goto switchNumb;
+
         break;
     }
 //---------------------------------------------\/-END-\/------------------------
@@ -185,14 +186,18 @@ cout << "Закончить выполнение программы или за�
 cout << "(1 = запустить заново ИЛИ |остальное| = ЗАКОНЧИТЬ): ";
 string EndZnach = "";
 cin >> EndZnach;
+
 if (EndZnach == "1"){
     cout << "\x1B[2J\x1B[H"; // console clear for *nix version
-    goto Nachalo;
+    nachalo=true;
 }else{
+    nachalo=false;
     cout << "\x1B[2J\x1B[H"; // console clear for *nix version
     cout << "Програма завершена. \n \n Программу выполнил: \n Студент: Корнеев Дмитрий \n Группы: ИНБО-04-18"<< "\n";
 }
-cout << "\n \n \nВведите любое значение, для закрытия окна." << "\n";
+}
+cout << "\n \n \n Введите любое значение, для закрытия окна." << "\n";
+cin.get();
 cin.get();
 	return 0;
 }
