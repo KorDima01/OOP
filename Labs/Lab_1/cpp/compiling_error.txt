@@ -1,2 +1,0 @@
-/home/dima/github/OOP/Labs/Lab_1/cpp/START.cpp:1:22: fatal error: \h/Start.h: Нет такого файла или каталога
-compilation terminated.
