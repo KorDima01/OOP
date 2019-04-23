@@ -1,0 +1,77 @@
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:3:1: error: unknown type name ‘class’
+ class Screen
+ ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:4:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ {
+ ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:12:1: error: unknown type name ‘class’
+ class Keyboard
+ ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:13:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ {
+ ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:21:1: error: unknown type name ‘class’
+ class Notebook : public Screen, Keyboard
+ ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:21:16: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ class Notebook : public Screen, Keyboard
+                ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:37:1: error: unknown type name ‘class’
+ class Phone : public Screen, Keyboard
+ ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:37:13: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ class Phone : public Screen, Keyboard
+             ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:53:1: error: unknown type name ‘class’
+ class PC : public Screen, Keyboard
+ ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:53:10: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ class PC : public Screen, Keyboard
+          ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h: In function ‘Programma7_4’:
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:70:3: error: unknown type name ‘string’
+   string Resolution;
+   ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:71:3: error: unknown type name ‘string’
+   string KeyboardLayout;
+   ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:72:3: error: ‘cout’ undeclared (first use in this function)
+   cout << "ПК: " << endl;
+   ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:72:3: note: each undeclared identifier is reported only once for each function it appears in
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:72:23: error: ‘endl’ undeclared (first use in this function)
+   cout << "ПК: " << endl;
+                       ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:74:3: error: ‘cin’ undeclared (first use in this function)
+   cin >> Resolution;
+   ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:77:2: error: unknown type name ‘PC’
+  PC p(Resolution, KeyboardLayout);
+  ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:77:2: warning: parameter names (without types) in function declaration
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:83:2: error: unknown type name ‘Phone’
+  Phone phon(Resolution, KeyboardLayout);
+  ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:83:2: warning: parameter names (without types) in function declaration
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:89:3: error: unknown type name ‘Notebook’
+   Notebook r(Resolution, KeyboardLayout);
+   ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:89:3: warning: parameter names (without types) in function declaration
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:90:73: error: request for member ‘printResolution’ in something not a structure or union
+   cout << "ПК: " << endl << "разрешение экрана: " << p.printResolution() << endl << "Раскладка клавиатуры: " << p.printKeyboardLayout() << endl;
+                                                                         ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:90:151: error: request for member ‘printKeyboardLayout’ in something not a structure or union
+   cout << "ПК: " << endl << "разрешение экрана: " << p.printResolution() << endl << "Раскладка клавиатуры: " << p.printKeyboardLayout() << endl;
+                                                                                                                                                       ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:91:85: error: request for member ‘printResolution’ in something not a structure or union
+  cout << "Телефон: " << endl << "разрешение экрана: " << phon.printResolution() << endl << "Раскладка клавиатуры: " << phon.printKeyboardLayout() << endl;
+                                                                                     ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:91:166: error: request for member ‘printKeyboardLayout’ in something not a structure or union
+  cout << "Телефон: " << endl << "разрешение экрана: " << phon.printResolution() << endl << "Раскладка клавиатуры: " << phon.printKeyboardLayout() << endl;
+                                                                                                                                                                      ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:92:82: error: request for member ‘printResolution’ in something not a structure or union
+  cout << "Ноутбук: " << endl << "разрешение экрана: " << r.printResolution() << endl << "Раскладка клавиатуры: " << r.printKeyboardLayout() << endl;
+                                                                                  ^
+/home/dima/github/OOP/Practicks/cpp/h/Programm7_4.h:92:160: error: request for member ‘printKeyboardLayout’ in something not a structure or union
+  cout << "Ноутбук: " << endl << "разрешение экрана: " << r.printResolution() << endl << "Раскладка клавиатуры: " << r.printKeyboardLayout() << endl;
+                                                                                                                                                                ^
