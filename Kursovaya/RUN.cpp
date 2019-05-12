@@ -14,6 +14,7 @@ bool IsOnlyNumberContains(string input)
 
 int main()
 {
+    setlocale(LC_ALL,"RUS");
     bool nachalo=true;
     while(nachalo!=false)
 {

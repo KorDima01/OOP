@@ -2,10 +2,13 @@
 #define Start
 
 #include <iostream>
-#include <string.h>
-#include <stdlib.h>
+#include <string>
 #include <cmath>
+#include<fstream>
 
 using namespace std;
+
+
+
 
 #endif
