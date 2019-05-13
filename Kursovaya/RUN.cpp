@@ -60,40 +60,121 @@ int main()
     }
 
     cout << "\x1B[2J\x1B[H"; // console clear for *nix version
-    cout << "Введено: \n" + zn1 + " " + str1 + "\n" + "  " + deystvie + "\n" + zn2 + " " + str2 << "\n";
+    cout << "Введено: \n";
+    if(zn1 == "+") cout << "    " + str1 << endl;
+    if(zn1 == "-") cout << "   -" + str1 << endl;
+    cout << deystvie << endl;
+    if(zn2 == "+") cout << "    " + str2 << endl;
+    if(zn2 == "-") cout << "   -" + str2 << endl;
+
+    cout << "=" << endl;
 
     if((deystvie == "+"))
     {
-        if((zn1 == "+") && (zn2 == "+")){
-            cout << endl << Addition(str1, str2, zn1, zn2) << "\n";
+        if((zn1 == "+") && (zn2 == "+"))
+        {
+            cout << "    " << Addition(str1, str2) << "\n";
         }
         else
         if((zn1 == "-") && (zn2 == "-"))
         {
-            cout << endl << Addition(str1, str2, zn1, zn2) << "\n";
+            cout << "   -" << Addition(str1, str2) << "\n";
         }
         else
+        if((zn1 == "+") && (zn2 == "-"))
         {
-            cout << endl << Subtraction(str1, str2, zn1, zn2) << "\n";
+            if(str1 >= str2)
+            {
+                cout << "    " << Subtraction(str1, str2, zn1, zn2) << "\n";
+            }
+            else
+            {
+                cout << "   -" << Subtraction(str1, str2, zn1, zn2) << "\n";
+            }
         }
-
+        if((zn1 == "-") && (zn2 == "+"))
+        {
+            if(str1 <= str2)
+            {
+                cout << "    " << Subtraction(str1, str2, zn1, zn2) << "\n";
+            }
+            else
+            {
+                cout << "   -" << Subtraction(str1, str2, zn1, zn2) << "\n";
+            }
+        }
     }
     if((deystvie == "-"))
     {
-        cout << endl << Subtraction(str1, str2, zn1, zn2) << "\n";
+        if((zn1 == "+") && (zn2 == "-"))
+        {
+            cout << "    " << Addition(str1, str2) << "\n";
+        }
+        else
+        if((zn1 == "-") && (zn2 == "+"))
+        {
+            cout << "   -" << Addition(str1, str2) << "\n";
+        }
+        else
+        if((zn1 == "+") && (zn2 == "+"))
+        {
+            if(str1 >= str2)
+            {
+                cout << "    " << Subtraction(str1, str2, zn1, zn2) << "\n";
+            }
+            else
+            {
+                cout << "   -" << Subtraction(str1, str2, zn1, zn2) << "\n";
+            }
+        }
+        if((zn1 == "-") && (zn2 == "-"))
+        {
+            if(str1 <= str2)
+            {
+                cout << "    " << Subtraction(str1, str2, zn1, zn2) << "\n";
+            }
+            else
+            {
+                cout << "   -" << Subtraction(str1, str2, zn1, zn2) << "\n";
+            }
+        }
     }
 
     if((deystvie == "*"))
     {
-        cout << endl << Multiplication(str1, str2, zn1, zn2) << "\n";
+        if(((zn1 == "+") && (zn2 == "+")) || ((zn1 == "-") && (zn2 == "-")))
+        {
+            cout << "    " << Multiplication(str1, str2) << "\n";
+        }
+        else
+        if(((zn1 == "-") && (zn2 == "+")) || ((zn1 == "+") && (zn2 == "-")))
+        {
+            cout << "   -" << Multiplication(str1, str2) << "\n";
+        }
     }
     if((deystvie == "mod"))
     {
-        cout << endl << DMod(str1, str2, zn1, zn2) << "\n";
+        if(((zn1 == "+") && (zn2 == "+")) || ((zn1 == "-") && (zn2 == "-")))
+        {
+            cout << "    " << DMod(str1, str2) << "\n";
+        }
+        else
+        if(((zn1 == "-") && (zn2 == "+")) || ((zn1 == "+") && (zn2 == "-")))
+        {
+            cout << "   -" << DMod(str1, str2) << "\n";
+        }
     }
     if((deystvie == "div"))
     {
-        cout << endl << DDiv(str1, str2, zn1, zn2) << "\n";
+        if(((zn1 == "+") && (zn2 == "+")) || ((zn1 == "-") && (zn2 == "-")))
+        {
+            cout << "    " << DDiv(str1, str2) << "\n";
+        }
+        else
+        if(((zn1 == "-") && (zn2 == "+")) || ((zn1 == "+") && (zn2 == "-")))
+        {
+            cout << "   -" << DDiv(str1, str2) << "\n";
+        }
     }
 
 

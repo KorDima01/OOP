@@ -3,7 +3,7 @@
 #include "start.h"
 
 //------------------------------------------------------------НАЧАЛО-СУММЫ------
-string Addition(string s1, string s2, string zn1, string zn2)
+string Addition(string s1, string s2)
 {
     string s11, s22, result = "";
 
@@ -71,26 +71,10 @@ int buffer = 0;
     if (result.at(0) == '0')
     {
       result.erase(0, 1);
-      if((zn1 == "+") && (zn2 == "+"))
-      {
-        return s11 + "\n" + " + " + "\n" + s22 + "\n" + " = " + "\n" + result;
-      }
-      if((zn1 == "-") && (zn2 == "-"))
-      {
-        return "-" + s11 + "\n + \n" + "-" + s22 + "\n = \n" + "-" + result;
-      }
+      return result;
     }
-    else
-    {
-      if((zn1 == "+") && (zn2 == "+"))
-      {
-        return s11 + "\n" + " + " + "\n" + s22 + "\n" + " = " + "\n" + result;
-      }
-      if((zn1 == "-") && (zn2 == "-"))
-      {
-        return "-" + s11 + "\n + \n" + "-" + s22 + "\n = \n" + "-" + result;
-      }
-    }
+    else return result;
+
 
 }
 //------------------------------------------------------------КОНЕЦ--СУММЫ------
