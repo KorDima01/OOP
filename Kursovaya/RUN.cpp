@@ -104,6 +104,7 @@ int main()
             }
         }
     }
+    else
     if((deystvie == "-"))
     {
         if((zn1 == "+") && (zn2 == "-"))
@@ -139,7 +140,7 @@ int main()
             }
         }
     }
-
+    else
     if((deystvie == "*"))
     {
         if(((zn1 == "+") && (zn2 == "+")) || ((zn1 == "-") && (zn2 == "-")))
@@ -152,6 +153,7 @@ int main()
             cout << "   -" << Multiplication(str1, str2) << "\n";
         }
     }
+    else
     if((deystvie == "mod"))
     {
         if(((zn1 == "+") && (zn2 == "+")) || ((zn1 == "-") && (zn2 == "-")))
@@ -164,6 +166,7 @@ int main()
             cout << "   -" << DMod(str1, str2) << "\n";
         }
     }
+    else
     if((deystvie == "div"))
     {
         if(((zn1 == "+") && (zn2 == "+")) || ((zn1 == "-") && (zn2 == "-")))

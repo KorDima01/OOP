@@ -4,7 +4,7 @@
 string Multiplication(string s1, string s2)
 {
   string s11, s22, result = "";
-  
+
   // шаг 1 инициализация строк
       if (s1.length() > s2.length()){
           s11 = s1;
@@ -27,9 +27,22 @@ string Multiplication(string s1, string s2)
       reverse(s11.begin(), s11.end());
       reverse(s22.begin(), s22.end());
   // шаг 3 работа со строками
-  //i = {0 -> 4 294 967 295}
   int buffer = 0;
-  return "В разработке";
+  string vremennaya = "0";
+
+  while(vremennaya != s22){
+    vremennaya = Addition(vremennaya,"1");
+    result = Addition(result,s11);
+  }
+  //Вывод ответа
+  reverse(result.begin(), result.end());
+  // Удаление незначимого нуля в ответе
+  if (result.at(0) == '0')
+  {
+    result.erase(0, 1);
+    return result;
+  }
+  else return result;
 }
 
 #endif

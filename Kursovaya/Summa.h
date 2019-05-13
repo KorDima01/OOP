@@ -65,8 +65,6 @@ int buffer = 0;
 
 //Вывод ответа
     reverse(result.begin(), result.end());
-    reverse(s11.begin(), s11.end());
-    reverse(s22.begin(), s22.end());
 // Удаление незначимого нуля в ответе
     if (result.at(0) == '0')
     {
