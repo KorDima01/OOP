@@ -32,7 +32,9 @@ string Multiplication(string s1, string s2)
 
   while(vremennaya != s22){
     vremennaya = Addition(vremennaya,"1");
+    cout << vremennaya << endl;
     result = Addition(result,s11);
+    cout << result << endl;
   }
   //Вывод ответа
   reverse(result.begin(), result.end());
@@ -42,7 +44,10 @@ string Multiplication(string s1, string s2)
     result.erase(0, 1);
     return result;
   }
-  else return result;
+  else
+  {
+    return result;
+  }
 }
 
 #endif
