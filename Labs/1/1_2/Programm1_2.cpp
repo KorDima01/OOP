@@ -93,7 +93,7 @@ int main(int argc, const char * argv[]) {
     //Вариант 2
     vector<int> arr;
     srand(time(0));
-    cout << "Created array" << endl;
+    cout << endl << "Created array" << endl;
     for (int i = 0; i < 10;i++){
         arr.push_back(rand()%20);
         cout << arr[i] << ' ';
@@ -106,7 +106,7 @@ int main(int argc, const char * argv[]) {
         cout << arr[i] << ' ';
 
     cout << endl;
-    
+
 	cout << "\n \n \n Введите любое значение, для закрытия окна." << "\n";
     cin.get();
 	cin.get();
