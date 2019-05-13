@@ -26,6 +26,7 @@ int main()
 
     while (!((zn1 == "+") || (zn1 == "-")))
     {
+        cout << "\x1B[2J\x1B[H"; // console clear for *nix version
         cout << "Введите знак первого числа:" << "\n 1)";
         cin >> zn1;
     }
@@ -40,6 +41,7 @@ int main()
 
     while (!((zn2 == "+") || (zn2 == "-")))
     {
+        cout << "\x1B[2J\x1B[H"; // console clear for *nix version
         cout << "Введите знак второго числа:" << "\n 2)";
         cin >> zn2;
     }
@@ -54,9 +56,13 @@ int main()
 
     while (!((deystvie == "+") || (deystvie == "-") || (deystvie == "*") || (deystvie == "mod") || (deystvie == "div")))
     {
+        cout << "\x1B[2J\x1B[H"; // console clear for *nix version
         cout << "Какое действие сделать? (+|-|*|mod|div)" << "\n";
         cin >> deystvie;
     }
+
+    cout << "\x1B[2J\x1B[H"; // console clear for *nix version
+    cout << "Введено: \n" + zn1 + " " + str1 + "\n" + "  " + deystvie + "\n" + zn2 + " " + str2 << "\n";
 
     if((deystvie == "+"))
     {
