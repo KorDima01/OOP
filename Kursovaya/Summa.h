@@ -3,7 +3,7 @@
 #include "start.h"
 
 //------------------------------------------------------------НАЧАЛО-СУММЫ------
-string SUMMA(string s1, string s2)
+string Addition(string s1, string s2, string zn1, string zn2)
 {
     string s11, s22, result = "";
 
@@ -20,6 +20,7 @@ string SUMMA(string s1, string s2)
     {
         result += "0";
     }
+
     while (s22.length() < s11.length())
     {
         s22 = "0" + s22;
@@ -67,10 +68,33 @@ int buffer = 0;
     reverse(s11.begin(), s11.end());
     reverse(s22.begin(), s22.end());
 // Удаление незначимого нуля в ответе
-    if (result.at(0) == '0') result.erase(0, 1);
+    if (result.at(0) == '0')
+    {
+      result.erase(0, 1);
+      if((zn1 == "+") && (zn2 == "+"))
+      {
+        return s11 + "\n" + " + " + "\n" + s22 + "\n" + " = " + "\n" + result;
+      }
+      if((zn1 == "-") && (zn2 == "-"))
+      {
+        return "-" + s11 + "\n + \n" + "-" + s22 + "\n = \n" + "-" + result;
+      }
+    }
+    else
+    {
+      if((zn1 == "+") && (zn2 == "+"))
+      {
+        return s11 + "\n" + " + " + "\n" + s22 + "\n" + " = " + "\n" + result;
+      }
+      if((zn1 == "-") && (zn2 == "-"))
+      {
+        return "-" + s11 + "\n + \n" + "-" + s22 + "\n = \n" + "-" + result;
+      }
+    }
 
-    return s11 + "\n" + " + " + "\n" + s22 + "\n" + " = " + "\n" + result;
 }
 //------------------------------------------------------------КОНЕЦ--СУММЫ------
+
+
 
 #endif

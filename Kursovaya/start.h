@@ -11,7 +11,8 @@ using namespace std;
 #include "Summa.h"
 #include "Vichitanie.h"
 #include "Umnojenie.h"
-#include "Delenie.h"
+#include "DelenieDiv.h"
+#include "DelenieMod.h"
 
 
 #endif

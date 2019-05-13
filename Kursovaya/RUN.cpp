@@ -1,15 +1,15 @@
 #include "start.h"
 
-bool IsOnlyNumberContains(string input)
+bool IsNotNumberContains(string input)
 {
     for (int i = 0; i < input.length(); i++)
     {
         if ((input.at(i) < '0') || (input.at(i) > '9'))
         {
-            return false;
+            return true;
         }
     }
-    return true;
+    return false;
 }
 
 int main()
@@ -18,29 +18,83 @@ int main()
     bool nachalo=true;
     while(nachalo!=false)
 {
-    string str1,str2 = "";
-    cout << "Введите два числа:";
-    cout << "\n 1)";
-    cin >> str1;
-    cout << "\n 2)";
-    cin >> str2;
+    string str1= ".";
+    string str2= ".";
+    string zn1= ".";
+    string zn2 = ".";
+    string deystvie = ".";
 
-    while (!IsOnlyNumberContains(str1))
+    while (!((zn1 == "+") || (zn1 == "-")))
+    {
+        cout << "Введите знак первого числа:" << "\n 1)";
+        cin >> zn1;
+    }
+
+    while (IsNotNumberContains(str1))
     {
         cout << "\x1B[2J\x1B[H"; // console clear for *nix version
-        cout << "Введите только цифры:" << "\n";
+        cout << "Введите первое число:" << "\n";
         cout << "1)";
         cin >> str1;
     }
-    while (!IsOnlyNumberContains(str2))
+
+    while (!((zn2 == "+") || (zn2 == "-")))
+    {
+        cout << "Введите знак второго числа:" << "\n 2)";
+        cin >> zn2;
+    }
+
+    while (IsNotNumberContains(str2))
     {
         cout << "\x1B[2J\x1B[H"; // console clear for *nix version
-        cout << "Введите только цифры:" << "\n";
+        cout << "Введите второе число:" << "\n";
         cout << "2)";
         cin >> str2;
     }
 
-    cout << endl << SUMMA(str1, str2) << "\n";
+    while (!((deystvie == "+") || (deystvie == "-") || (deystvie == "*") || (deystvie == "mod") || (deystvie == "div")))
+    {
+        cout << "Какое действие сделать? (+|-|*|mod|div)" << "\n";
+        cin >> deystvie;
+    }
+
+    if((deystvie == "+"))
+    {
+        if((zn1 == "+") && (zn2 == "+")){
+            cout << endl << Addition(str1, str2, zn1, zn2) << "\n";
+        }
+        else
+        if((zn1 == "-") && (zn2 == "-"))
+        {
+            cout << endl << Addition(str1, str2, zn1, zn2) << "\n";
+        }
+        else
+        {
+            cout << endl << Subtraction(str1, str2, zn1, zn2) << "\n";
+        }
+
+    }
+    if((deystvie == "-"))
+    {
+        cout << endl << Subtraction(str1, str2, zn1, zn2) << "\n";
+    }
+
+    if((deystvie == "*"))
+    {
+        cout << endl << Multiplication(str1, str2, zn1, zn2) << "\n";
+    }
+    if((deystvie == "mod"))
+    {
+        cout << endl << DMod(str1, str2, zn1, zn2) << "\n";
+    }
+    if((deystvie == "div"))
+    {
+        cout << endl << DDiv(str1, str2, zn1, zn2) << "\n";
+    }
+
+
+
+
 
 
 //------------------------------------------------------------КОНЕЦ-ПРОГРАММЫ---
