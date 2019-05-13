@@ -39,12 +39,12 @@ public:
 int main()
 {
 	Animal a("123");
-	Fish b("ClownFish");
+	Fish b("MoonFish");
 	Bird c(10);
 
-	a.setData("a_12", 5);
-	b.setData("b_123", 6);
-	c.setData("c_1234", 7);
+	a.setData("111", 2);
+	b.setData("222", 3);
+	c.setData("333", 2);
 
 	cout << "Animal\nType animal: " << a.getType() <<
 		"\nName of animal: " << a.getName() <<
