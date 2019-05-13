@@ -27,9 +27,9 @@ public:
 
 int main()
 {
-	Headman h("@132", "INBO-04-18");
-	h.setName("123", "567");
-	cout << "Headman \n";
+	Headman h("@111", "INBO-04-18");
+	h.setName("Dmitriy", "Korneev");
+	cout << "Headman \n"; // староста
 	h.getName();
 	h.getIdOfGroup();
 
