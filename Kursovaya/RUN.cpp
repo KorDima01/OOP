@@ -27,30 +27,28 @@ int main()
     while (!((zn1 == "+") || (zn1 == "-")))
     {
         cout << "\x1B[2J\x1B[H"; // console clear for *nix version
-        cout << "Введите знак первого числа:" << "\n 1)";
+        cout << "Введите знак первого числа:" << "\n1)";
         cin >> zn1;
     }
 
     while (IsNotNumberContains(str1))
     {
         cout << "\x1B[2J\x1B[H"; // console clear for *nix version
-        cout << "Введите первое число:" << "\n";
-        cout << "1)";
+        cout << "Введите первое число:" << "\n1)";
         cin >> str1;
     }
 
     while (!((zn2 == "+") || (zn2 == "-")))
     {
         cout << "\x1B[2J\x1B[H"; // console clear for *nix version
-        cout << "Введите знак второго числа:" << "\n 2)";
+        cout << "Введите знак второго числа:" << "\n2)";
         cin >> zn2;
     }
 
     while (IsNotNumberContains(str2))
     {
         cout << "\x1B[2J\x1B[H"; // console clear for *nix version
-        cout << "Введите второе число:" << "\n";
-        cout << "2)";
+        cout << "Введите второе число:" << "\n2)";
         cin >> str2;
     }
 
