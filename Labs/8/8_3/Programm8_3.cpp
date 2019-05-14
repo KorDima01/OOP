@@ -19,7 +19,7 @@ public:
 int main()
 {
 	queue<Car> c;
-	Car c1("123", "blue", "123n");
+	Car c1("123", "green", "123n");
 	Car c2("321", "red", "321n");
 	c.push(c1);
 	c.push(c2);

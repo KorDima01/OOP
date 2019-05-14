@@ -7,8 +7,8 @@ class Human {
 	int age;
 public:
 	Human() {
-		surname = "123";
-		name = "456";
+		surname = "111";
+		name = "222";
 		age = 18;
 	}
 	Human(string n, string sn, string mn, int ag) :name(n), surname(sn), midname(mn), age(ag) {}
@@ -56,7 +56,7 @@ int main()
 {
 	Student s("123", "456", "789", 18, 1);
 	s.print();
-	Boss b("987", "654", "321", 54, 143);
+	Boss b("987", "654", "321", 54, 100);
 	b.print();
 
     cout << "\n \n \n Введите любое значение, для закрытия окна." << "\n";
