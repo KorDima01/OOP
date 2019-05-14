@@ -6,14 +6,9 @@ string Subtraction(string s1, string s2, string zn1, string zn2)
     string s11, s22, result = "";
 
 // шаг 1 инициализация строк
-    if (s1.length() > s2.length()){
-        s11 = s1;
-        s22 = s2;
-    }
-    else{
-        s11 = s2;
-        s22 = s1;
-    }
+    s11 = s1;
+    s22 = s2;
+
     while (result.length() <= s11.length())
     {
         result += "0";
@@ -29,22 +24,23 @@ string Subtraction(string s1, string s2, string zn1, string zn2)
 // шаг 3 работа со строками
 //i = {0 -> 4 294 967 295}
 int buffer = 0;
+string zn = "";
     for(unsigned int i = 0; i < result.length()-1;i++)
     {
-        if(buffer + s11.at(i) - s22.at(i) - 2 * '0' <= 9)
+      if((s11.at(i) - s22.at(i) + 10 - buffer - 2 * '0' ) >= 10)
         {
-          result.at(i) += buffer + s11.at(i) - s22.at(i) - 2*'0';
-          buffer = 0;
+          result.at(i) += (s11.at(i) - s22.at(i) + 10 - buffer - 2 * '0') % 10;
+          buffer = 1;
         }
         else
         {
-          result.at(i) += buffer + s11.at(i) - s22.at(i) - 10 - 2*'0';
+          result.at(i) += (s11.at(i) - s22.at(i) - buffer - 2 * '0');
           buffer = 1;
         }
     }
     if (buffer == 1)
     {
-      result.at(result.length() - 1) = '1';
+      zn = '-';
     }
 
 //Вывод ответа
@@ -60,7 +56,7 @@ while(result.at(i))
   else
   break;
 }
-return result;
+if(zn == "1") {return "-" + result;}
 }
 
 #endif
