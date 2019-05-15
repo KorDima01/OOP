@@ -6,9 +6,17 @@ string Subtraction(string s1, string s2, string zn1, string zn2)
     string s11, s22, result = "";
 
 // шаг 1 инициализация строк
-    s11 = s1;
-    s22 = s2;
-
+    if ((Bolshe(s1, s2) == ">") || (Bolshe(s1, s2) == "="))
+    {
+      s11 = s1;
+      s22 = s2;
+    }
+    else
+    {
+      s11 = s2;
+      s22 = s1;
+    }
+    
     while (result.length() <= s11.length())
     {
         result += "0";
@@ -57,6 +65,7 @@ while(result.at(i))
   break;
 }
 if(zn == "1") {return "-" + result;}
+
 }
 
 #endif

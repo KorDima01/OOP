@@ -8,6 +8,8 @@
 #include <ctype.h>
 using namespace std;
 
+#include "Bolshe_Menshe.h"
+
 #include "Summa.h"
 #include "Vichitanie.h"
 #include "Umnojenie.h"

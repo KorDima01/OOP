@@ -35,27 +35,13 @@ int buffer = 0;
     {
         if(buffer + s11.at(i) + s22.at(i) - 2 * '0' <= 9)
         {
-            if (buffer == 1)
-            {
-                result.at(i) += buffer + s11.at(i) + s22.at(i) - 2*'0';
-            }
-            else
-            {
-                result.at(i) += buffer + s11.at(i) + s22.at(i) - 2*'0';
-            }
-            buffer = 0;
+          result.at(i) += buffer + s11.at(i) + s22.at(i) - 2*'0';
+          buffer = 0;
         }
         else
         {
-            if (buffer == 1)
-            {
-                result.at(i) += buffer + s11.at(i) + s22.at(i) - 10 - 2*'0';
-            }
-            else
-            {
-                result.at(i) += buffer + s11.at(i) + s22.at(i) - 10 - 2*'0';
-            }
-            buffer = 1;
+          result.at(i) += buffer + s11.at(i) + s22.at(i) - 10 - 2*'0';
+          buffer = 1;
         }
     }
     if (buffer == 1)

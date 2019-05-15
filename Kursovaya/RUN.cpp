@@ -51,6 +51,42 @@ int main()
         cout << "Введите второе число:" << "\n2)";
         cin >> str2;
     }
+//------------------------------------------------------НАЧАЛО-ПРОВЕРКИ НА НОЛЬ-
+    unsigned int ii = 0;
+    while(0==0)
+    {
+        if ((str1.at(ii) == '0') && (ii != str1.length()-1))
+        {
+            str1.erase(0, 1);
+        }
+        else
+        break;
+        ii++;
+    }
+    ii = 0;
+    while(0==0)
+    {
+        if ((str2.at(ii) == '0') && (ii != str2.length()-1))
+        {
+            str2.erase(0, 1);
+        }
+        else
+        break;
+        ii++;
+    }
+
+    if (((str1 == "") || (str1 == "0")) && ((zn1 == "-") || (zn1 == "+")))
+    {
+        str1 = "0";
+        zn1 = "+";
+    }
+    if (((str2 == "") || (str2 == "0")) && ((zn2 == "-") || (zn2 == "+")))
+    {
+        str2 = "0";
+        zn2 = "+";
+    }
+//------------------------------------------------------КОНЕЦ--ПРОВЕРКИ НА НОЛЬ-
+
 
     while (!((deystvie == "+") || (deystvie == "-") || (deystvie == "*") || (deystvie == "mod") || (deystvie == "div")))
     {
@@ -83,7 +119,7 @@ int main()
         else
         if((zn1 == "+") && (zn2 == "-"))
         {
-            if(str1 >= str2)
+            if(Bolshe(str1, str2) == ">")
             {
                 cout << "    " << Subtraction(str1, str2, zn1, zn2) << "\n";
             }
@@ -94,7 +130,7 @@ int main()
         }
         if((zn1 == "-") && (zn2 == "+"))
         {
-            if(str1 <= str2)
+            if(Bolshe(str1, str2) == "<")
             {
                 cout << "    " << Subtraction(str1, str2, zn1, zn2) << "\n";
             }
@@ -119,7 +155,7 @@ int main()
         else
         if((zn1 == "+") && (zn2 == "+"))
         {
-            if(str1 >= str2)
+            if((Bolshe(str1, str2) == "=") || (Bolshe(str1, str2) == ">"))
             {
                 cout << "    " << Subtraction(str1, str2, zn1, zn2) << "\n";
             }
@@ -130,7 +166,7 @@ int main()
         }
         if((zn1 == "-") && (zn2 == "-"))
         {
-            if(str1 <= str2)
+            if((Bolshe(str1, str2) == "=") || (Bolshe(str1, str2) == "<"))
             {
                 cout << "    " << Subtraction(str1, str2, zn1, zn2) << "\n";
             }
