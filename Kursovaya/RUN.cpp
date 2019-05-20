@@ -107,6 +107,24 @@ int main()
 
     if((deystvie == "+"))
     {
+        if(ifZero(str1, str2) == "str1 = 0")
+        {
+            cout << "    " << zn2 << str2 << "\n";
+            break;
+        }
+        else
+        if(ifZero(str1, str2) == "str2 = 0")
+        {
+            cout << "    " << zn1 << str1 << "\n";
+            break;
+        }
+        else
+        if(ifZero(str1, str2) == "str1, str2 = 0")
+        {
+            cout << "    " << 0 << "\n";
+            break;
+        }
+        else
         if((zn1 == "+") && (zn2 == "+"))
         {
             cout << "    " << Addition(str1, str2) << "\n";
@@ -143,6 +161,24 @@ int main()
     else
     if((deystvie == "-"))
     {
+        if(ifZero(str1, str2) == "str1 = 0")
+        {
+            cout << "    " << zn2 << str2 << "\n";
+            break;
+        }
+        else
+        if(ifZero(str1, str2) == "str2 = 0")
+        {
+            cout << "    " << zn1 << str1 << "\n";
+            break;
+        }
+        else
+        if(ifZero(str1, str2) == "str1, str2 = 0")
+        {
+            cout << "    " << 0 << "\n";
+            break;
+        }
+        else
         if((zn1 == "+") && (zn2 == "-"))
         {
             cout << "    " << Addition(str1, str2) << "\n";
@@ -179,6 +215,11 @@ int main()
     else
     if((deystvie == "*"))
     {
+        if(ifZero(str1, str2) == "str1, str2 = 0")
+        {
+            cout << "    " << 0 << "\n";
+        }
+        else
         if(((zn1 == "+") && (zn2 == "+")) || ((zn1 == "-") && (zn2 == "-")))
         {
             cout << "    " << Multiplication(str1, str2) << "\n";
@@ -192,6 +233,24 @@ int main()
     else
     if((deystvie == "mod"))
     {
+        if(ifZero(str1, str2) == "str1 = 0")
+        {
+            cout << "    " << 0 << "\n";
+            break;
+        }
+        else
+        if(ifZero(str1, str2) == "str2 = 0")
+        {
+            cout << "    " << "Делить на 0 нельзя" << "\n";
+            break;
+        }
+        else
+        if(ifZero(str1, str2) == "str1, str2 = 0")
+        {
+            cout << "    " << "Делить на 0 нельзя" << "\n";
+            break;
+        }
+        else
         if(((zn1 == "+") && (zn2 == "+")) || ((zn1 == "-") && (zn2 == "-")))
         {
             cout << "    " << DMod(str1, str2) << "\n";
@@ -205,6 +264,24 @@ int main()
     else
     if((deystvie == "div"))
     {
+        if(ifZero(str1, str2) == "str1 = 0")
+        {
+            cout << "    " << 0 << "\n";
+            break;
+        }
+        else
+        if(ifZero(str1, str2) == "str2 = 0")
+        {
+            cout << "    " << "Делить на 0 нельзя" << "\n";
+            break;
+        }
+        else
+        if(ifZero(str1, str2) == "str1, str2 = 0")
+        {
+            cout << "    " << "Делить на 0 нельзя" << "\n";
+            break;
+        }
+        else
         if(((zn1 == "+") && (zn2 == "+")) || ((zn1 == "-") && (zn2 == "-")))
         {
             cout << "    " << DDiv(str1, str2) << "\n";

@@ -28,4 +28,14 @@ string Bolshe(string s1, string s2)
   }
 }
 
+string ifZero(string s1, string s2)
+{
+  if((s1 == "0") && (s2 == "0")) return "s1, s2 = 0";
+  if(s1 == "0") return "s1 = 0";
+  if(s2 == "0") return "s2 = 0";
+  if((s1 != "0") && (s2 != "0")) return "s1, s2 <> 0";
+}
+
+
+
 #endif
