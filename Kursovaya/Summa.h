@@ -35,12 +35,12 @@ int buffer = 0;
     {
         if(buffer + s11.at(i) + s22.at(i) - 2 * '0' <= 9)
         {
-          result.at(i) += buffer + s11.at(i) + s22.at(i) - 2*'0';
+          result.at(i) += buffer + s11.at(i) + s22.at(i) - 2 * '0';
           buffer = 0;
         }
         else
         {
-          result.at(i) += buffer + s11.at(i) + s22.at(i) - 10 - 2*'0';
+          result.at(i) += buffer + s11.at(i) + s22.at(i) - 10 - 2 * '0';
           buffer = 1;
         }
     }

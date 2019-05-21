@@ -317,5 +317,9 @@ int main()
     cout << "\n \n \n Введите любое значение, для закрытия окна." << "\n";
     cin.get();
     cin.get();
+    cin.get();
+    cin.get();
+    cin.get();
+    cin.get();
     return 0;
 }
