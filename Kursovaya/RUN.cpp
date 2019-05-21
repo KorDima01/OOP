@@ -91,7 +91,7 @@ int main()
     while (!((deystvie == "+") || (deystvie == "-") || (deystvie == "*") || (deystvie == "mod") || (deystvie == "div")))
     {
         cout << "\x1B[2J\x1B[H"; // console clear for *nix version
-        cout << "Какое действие сделать? (+|-|*|mod|div)" << "\n";
+        cout << "Какое действие сделать? (+|-|*|div|mod)" << "\n";
         cin >> deystvie;
     }
 
@@ -315,10 +315,6 @@ int main()
     }
 }
     cout << "\n \n \n Введите любое значение, для закрытия окна." << "\n";
-    cin.get();
-    cin.get();
-    cin.get();
-    cin.get();
     cin.get();
     cin.get();
     return 0;

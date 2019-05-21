@@ -15,13 +15,18 @@ string Bolshe(string s1, string s2)
   }
   else
   {
-    reverse(s1.begin(), s1.end());
-    reverse(s2.begin(), s2.end());
-    for (int i = 0; i < s1.length(); i++)
+    // reverse(s1.begin(), s1.end());
+    // reverse(s2.begin(), s2.end());
+    for (int i = 0; i <= s1.length() - 1; i++)
     {
       if (s1.at(i) > s2.at(i))
       {
         return ">";
+      }
+      else
+      if (s1.at(i) < s2.at(i))
+      {
+        return "<";
       }
     }
     return "=";
