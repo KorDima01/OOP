@@ -1,0 +1,19 @@
+In file included from /home/dima/github/OOP/Kursovaya/START.cpp:2:0:
+/home/dima/github/OOP/Kursovaya/BigNumber.cpp: In constructor ‘BigNumber::BigNumber(std::__cxx11::string, std::__cxx11::string)’:
+/home/dima/github/OOP/Kursovaya/BigNumber.cpp:15:15: error: ‘zn1’ was not declared in this scope
+     while (!((zn1 == "+") || (zn1 == "-")))
+               ^
+/home/dima/github/OOP/Kursovaya/BigNumber.cpp:29:15: error: ‘zn2’ was not declared in this scope
+     while (!((zn2 == "+") || (zn2 == "-")))
+               ^
+/home/dima/github/OOP/Kursovaya/BigNumber.cpp: At global scope:
+/home/dima/github/OOP/Kursovaya/BigNumber.cpp:54:27: error: no ‘std::__cxx11::string BigNumber::getstr2()’ member function declared in class ‘BigNumber’
+ string BigNumber::getstr2(){
+                           ^
+/home/dima/github/OOP/Kursovaya/START.cpp: In function ‘int main()’:
+/home/dima/github/OOP/Kursovaya/START.cpp:20:1: error: ‘Bignumber’ was not declared in this scope
+ Bignumber Number;
+ ^
+/home/dima/github/OOP/Kursovaya/START.cpp:21:18: error: ‘number’ was not declared in this scope
+ number(str1, str2);
+                  ^
