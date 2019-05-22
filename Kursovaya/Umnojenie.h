@@ -21,6 +21,11 @@ if (Bolshe(s1, s2) == "<")
   s11 = s2;
   s22 = s1;
 }
+else
+{
+  s11 = s1;
+  s22 = s2;
+}
   while (s22.length() < s11.length())
   {
       s22 = "0" + s22;
