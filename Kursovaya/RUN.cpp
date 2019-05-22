@@ -1,5 +1,7 @@
 #include "start.h"
 
+
+
 bool IsNotNumberContains(string input)
 {
     for (int i = 0; i < input.length(); i++)
@@ -105,6 +107,9 @@ int main()
 
     cout << "=" << endl;
 
+    srand(time(0));
+    unsigned int start_time = clock();
+//------------------------------------------------------НАЧАЛО-РАСЧЕТОВ---------
     if((deystvie == "+"))
     {
         if(ifZero(str1, str2) == "str1 = 0")
@@ -139,22 +144,22 @@ int main()
         {
             if(Bolshe(str1, str2) == ">")
             {
-                cout << "    " << Subtraction(str1, str2, zn1, zn2) << "\n";
+                cout << "    " << Subtraction(str1, str2) << "\n";
             }
             else
             {
-                cout << "   -" << Subtraction(str1, str2, zn1, zn2) << "\n";
+                cout << "   -" << Subtraction(str1, str2) << "\n";
             }
         }
         if((zn1 == "-") && (zn2 == "+"))
         {
             if(Bolshe(str1, str2) == "<")
             {
-                cout << "    " << Subtraction(str1, str2, zn1, zn2) << "\n";
+                cout << "    " << Subtraction(str1, str2) << "\n";
             }
             else
             {
-                cout << "   -" << Subtraction(str1, str2, zn1, zn2) << "\n";
+                cout << "   -" << Subtraction(str1, str2) << "\n";
             }
         }
     }
@@ -193,22 +198,22 @@ int main()
         {
             if((Bolshe(str1, str2) == "=") || (Bolshe(str1, str2) == ">"))
             {
-                cout << "    " << Subtraction(str1, str2, zn1, zn2) << "\n";
+                cout << "    " << Subtraction(str1, str2) << "\n";
             }
             else
             {
-                cout << "   -" << Subtraction(str1, str2, zn1, zn2) << "\n";
+                cout << "   -" << Subtraction(str1, str2) << "\n";
             }
         }
         if((zn1 == "-") && (zn2 == "-"))
         {
             if((Bolshe(str1, str2) == "=") || (Bolshe(str1, str2) == "<"))
             {
-                cout << "    " << Subtraction(str1, str2, zn1, zn2) << "\n";
+                cout << "    " << Subtraction(str1, str2) << "\n";
             }
             else
             {
-                cout << "   -" << Subtraction(str1, str2, zn1, zn2) << "\n";
+                cout << "   -" << Subtraction(str1, str2) << "\n";
             }
         }
     }
@@ -292,13 +297,12 @@ int main()
             cout << "   -" << Division(str1, str2, deystvie) << "\n";
         }
     }
+//------------------------------------------------------НАЧАЛО-РАСЧЕТОВ---------
+    unsigned int end_time = clock();
+    unsigned int search_time = end_time - start_time;
 
+    cout << "Время затраченное на вычисления = " << search_time / 1000000.0 << " сек" << endl;
 
-
-
-
-
-//------------------------------------------------------------КОНЕЦ-ПРОГРАММЫ---
     cout <<"\n" << "Задание выполнено." << "\n";
     cout << "Закончить выполнение программы или запустить её заново?";
     cout << "(1 = запустить заново ИЛИ |остальное| = ЗАКОНЧИТЬ): ";
@@ -314,6 +318,7 @@ int main()
         cout << "Програма завершена. \n \n Программу выполнил: \n Студент: Корнеев Дмитрий \n Группы: ИНБО-04-18"<< "\n";
     }
 }
+//------------------------------------------------------------КОНЕЦ-ПРОГРАММЫ---
     cout << "\n \n \n Введите любое значение, для закрытия окна." << "\n";
     cin.get();
     cin.get();

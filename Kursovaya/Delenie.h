@@ -3,7 +3,9 @@
 
 string Division(string s1, string s2, string deystvie)
 {
-  string s11, s22, result = "";
+  string s11, s22;
+  string result = "0";
+  string DivOtv, ModOtv = "0";
   s11 = s1;
   s22 = s2;
   string x, y = "0";
@@ -12,38 +14,44 @@ string Division(string s1, string s2, string deystvie)
 
   if (Bolshe(s1, s2) == "=")
   {
-    return "1";
+    if(deystvie == "div")
+    {
+      return "1";
+    }
+    else
+    if(deystvie == "mod")
+    {
+      return "0";
+    }
   }
   else
   if (Bolshe(s1, s2) == "<")
   {
-    return "0";
+    return "---";
   }
   else
   {
-    cout << "Bolshe(s11, result) " << Bolshe(s11, result) << endl;
-    while(Bolshe(s11, result) == ">")
+    while(Bolshe(result, s11) == "<")
     {
-      cout << "Bolshe(s11, result) " << Bolshe(s11, result) << endl;
-      cout << "x " << x << endl;
-      result = Multiplication(x, s22);
       x = Addition(x, "1");
+      result = Multiplication(x, s22);
     }
-    while(Bolshe(s11, result) == ">")
-    {
-      cout << "Bolshe(s11, result) " << Bolshe(s11, result) << endl;
-      cout << "y " << y << endl;
-      result = Addition(y, "1");
-      y = Addition(y, "1");
-    }
-    if(deystvie == "div")
-    {
-      return x;
-    }
-    else
-    {
-      return y;
-    }
+  }
+  if (Bolshe(result, s11) == ">")
+  {
+    x = Subtraction(x, "1");
+  }
+  y = Subtraction(s11, Multiplication(s22, x));
+  DivOtv = x;
+  ModOtv = y;
+
+  if(deystvie == "div")
+  {
+    return DivOtv;
+  }
+  else
+  {
+    return ModOtv;
   }
 
 }

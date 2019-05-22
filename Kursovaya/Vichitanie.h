@@ -1,10 +1,9 @@
 #ifndef Vichitanie
 #define Vichitanie
 
-string Subtraction(string s1, string s2, string zn1, string zn2)
+string Subtraction(string s1, string s2)
 {
     string s11, s22, result = "";
-    cin.get();
 
 // шаг 1 инициализация строк
     if (Bolshe(s1, s2) == ">")

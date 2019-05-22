@@ -6,6 +6,8 @@
 #include <algorithm>
 #include <stdio.h>
 #include <ctype.h>
+#include <ctime>
+
 using namespace std;
 
 #include "Bolshe_Menshe.h"
