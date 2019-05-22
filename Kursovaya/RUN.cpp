@@ -1,7 +1,5 @@
 #include "start.h"
 
-
-
 bool IsNotNumberContains(string input)
 {
     for (int i = 0; i < input.length(); i++)
