@@ -1,46 +1,22 @@
 #include "BigNumber.h"
-bool IsNotNumberContains(string input)
+
+BigNumber::BigNumber(string str1, string str2, string zn1, string zn2, string deystvie)
 {
-    for (int i = 0; i < input.length(); i++)
-    {
-        if ((input.at(i) < '0') || (input.at(i) > '9'))
-        {
-            return true;
-        }
-    }
-    return false;
-}
-BigNumber::BigNumber(string str1, string str2)
-{
-    while (!((zn1 == "+") || (zn1 == "-")))
-    {
-        cout << "\x1B[2J\x1B[H"; // console clear for *nix version
-        cout << "Введите знак первого числа:" << "\n1)";
-        cin >> zn1;
-    }
-
-    while (IsNotNumberContains(str1))
-    {
-        cout << "\x1B[2J\x1B[H"; // console clear for *nix version
-        cout << "Введите первое число:" << "\n1)";
-        cin >> str1;
-    }
-
-    while (!((zn2 == "+") || (zn2 == "-")))
-    {
-        cout << "\x1B[2J\x1B[H"; // console clear for *nix version
-        cout << "Введите знак второго числа:" << "\n2)";
-        cin >> zn2;
-    }
-
-    while (IsNotNumberContains(str2))
-    {
-        cout << "\x1B[2J\x1B[H"; // console clear for *nix version
-        cout << "Введите второе число:" << "\n2)";
-        cin >> str2;
-    }
     str1_ = str1;
     str2_ = str2;
+    zn1_ = zn1;
+    zn2_ = zn2;
+    deystvie_ = deystvie;
+}
+void  BigNumber::printAll(){
+    cout << "\x1B[2J\x1B[H"; // console clear for *nix version
+    cout << "Введено: \n";
+    if(this->zn1_ == "+") cout << "    " + this->str1_ << endl;
+    if(this->zn1_ == "-") cout << "   -" + this->str1_ << endl;
+    cout << this->deystvie_ << endl;
+    if(this->zn2_ == "+") cout << "    " + this->str2_ << endl;
+    if(this->zn2_ == "-") cout << "   -" + this->str2_ << endl;
+    cout << "=" << endl;
 }
 string  BigNumber::printstr1(){
     return str1_;
@@ -54,8 +30,47 @@ string BigNumber::getstr1(){
 string BigNumber::getstr2(){
     return this->str2_;
 }
+string BigNumber::Bolshe(string s1, string s2)
+{
+    if (s1.length() > s2.length())
+    {
+        return ">";
+    }
+    else
+    if (s2.length() > s1.length())
+    {
+        return "<";
+    }
+    else
+    {
+        // reverse(s1.begin(), s1.end());
+        // reverse(s2.begin(), s2.end());
+        for (int i = 0; i <= s1.length() - 1; i++)
+        {
+            if (s1.at(i) > s2.at(i))
+            {
+                return ">";
+            }
+            else
+            if (s1.at(i) < s2.at(i))
+            {
+                return "<";
+            }
+        }
+        return "=";
+    }
+}
+string BigNumber::ifZero(string s1, string s2)
+{
+    if((s1 == "0") && (s2 == "0")) return "s1, s2 = 0";
+    if(s1 == "0") return "s1 = 0";
+    if(s2 == "0") return "s2 = 0";
+    if((s1 != "0") && (s2 != "0")) return "s1, s2 <> 0";
+}
 BigNumber BigNumber::operator+(BigNumber b){
-    return Addition(this->str1_, this->str2_);
+    BigNumber res;
+    res = Addition(this->str1_, this->str2_);
+    return res;
 }
 BigNumber BigNumber::operator-(BigNumber b){
     return Subtraction(this->str1_, this->str2_);

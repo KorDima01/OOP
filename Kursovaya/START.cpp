@@ -1,7 +1,17 @@
 #include "start.h"
 #include "BigNumber.cpp"
 
-
+bool IsNumberContains(string input)
+{
+    for (int i = 0; i < input.length(); i++)
+    {
+        if ((input.at(i) < '0') || (input.at(i) > '9'))
+        {
+            return true;
+        }
+    }
+    return false;
+}
 
 int main()
 {
@@ -9,50 +19,75 @@ int main()
     bool nachalo=true;
     while(nachalo!=false)
 {
-    string str1= ".";
-    string str2= ".";
-    string zn1= ".";
+    string str1 = ".";
+    string str2 = ".";
+    string zn1 = ".";
     string zn2 = ".";
     string deystvie = ".";
 
 //------------------------------------------------------------------------------
-cout << "Введите:" << "\n";
-Bignumber Number;
-number.(str1, str2);
-//------------------------------------------------------НАЧАЛО-ПРОВЕРКИ НА НОЛЬ-
-    unsigned int ii = 0;
-    while(0==0)
-    {
-        if ((str1.at(ii) == '0') && (ii != str1.length()-1))
-        {
-            str1.erase(0, 1);
-        }
-        else
-        break;
-        ii++;
-    }
-    ii = 0;
-    while(0==0)
-    {
-        if ((str2.at(ii) == '0') && (ii != str2.length()-1))
-        {
-            str2.erase(0, 1);
-        }
-        else
-        break;
-        ii++;
-    }
+while (!((zn1 == "+") || (zn1 == "-")))
+{
+    cout << "\x1B[2J\x1B[H"; // console clear for *nix version
+    cout << "Введите знак первого числа:" << "\n1)";
+    cin >> zn1;
+}
 
-    if (((str1 == "") || (str1 == "0")) && ((zn1 == "-") || (zn1 == "+")))
+while (IsNumberContains(str1))
+{
+    cout << "\x1B[2J\x1B[H"; // console clear for *nix version
+    cout << "Введите первое число:" << "\n1)";
+    cin >> str1;
+}
+
+while (!((zn2 == "+") || (zn2 == "-")))
+{
+    cout << "\x1B[2J\x1B[H"; // console clear for *nix version
+    cout << "Введите знак второго числа:" << "\n2)";
+    cin >> zn2;
+}
+
+while (IsNumberContains(str2))
+{
+    cout << "\x1B[2J\x1B[H"; // console clear for *nix version
+    cout << "Введите второе число:" << "\n2)";
+    cin >> str2;
+}
+unsigned int ii = 0;
+while(0==0)
+{
+    if ((str1.at(ii) == '0') && (ii != str1.length()-1))
     {
-        str1 = "0";
-        zn1 = "+";
+        str1.erase(0, 1);
     }
-    if (((str2 == "") || (str2 == "0")) && ((zn2 == "-") || (zn2 == "+")))
+    else
+    break;
+    ii++;
+}
+ii = 0;
+while(0==0)
+{
+    if ((str2.at(ii) == '0') && (ii != str2.length()-1))
     {
-        str2 = "0";
-        zn2 = "+";
+        str2.erase(0, 1);
     }
+    else
+    break;
+    ii++;
+}
+
+if (((str1 == "") || (str1 == "0")) && ((zn1 == "-") || (zn1 == "+")))
+{
+    str1 = "0";
+    zn1 = "+";
+}
+if (((str2 == "") || (str2 == "0")) && ((zn2 == "-") || (zn2 == "+")))
+{
+    str2 = "0";
+    zn2 = "+";
+}
+
+//------------------------------------------------------НАЧАЛО-ПРОВЕРКИ НА НОЛЬ-
 //------------------------------------------------------КОНЕЦ--ПРОВЕРКИ НА НОЛЬ-
 
 
@@ -63,34 +98,28 @@ number.(str1, str2);
         cin >> deystvie;
     }
 
-    cout << "\x1B[2J\x1B[H"; // console clear for *nix version
-    cout << "Введено: \n";
-    if(zn1 == "+") cout << "    " + str1 << endl;
-    if(zn1 == "-") cout << "   -" + str1 << endl;
-    cout << deystvie << endl;
-    if(zn2 == "+") cout << "    " + str2 << endl;
-    if(zn2 == "-") cout << "   -" + str2 << endl;
 
-    cout << "=" << endl;
+    BigNumber Number(str1, str2, zn1, zn2, deystvie);
+    Number.printAll();
 
     srand(time(0));
     unsigned int start_time = clock();
 //------------------------------------------------------НАЧАЛО-РАСЧЕТОВ---------
     if((deystvie == "+"))
     {
-        if(ifZero(str1, str2) == "str1 = 0")
+        if(Number.ifZero(str1, str2) == "str1 = 0")
         {
             cout << "    " << zn2 << str2 << "\n";
             break;
         }
         else
-        if(ifZero(str1, str2) == "str2 = 0")
+        if(Number.ifZero(str1, str2) == "str2 = 0")
         {
             cout << "    " << zn1 << str1 << "\n";
             break;
         }
         else
-        if(ifZero(str1, str2) == "str1, str2 = 0")
+        if(Number.ifZero(str1, str2) == "str1, str2 = 0")
         {
             cout << "    " << 0 << "\n";
             break;
@@ -108,7 +137,7 @@ number.(str1, str2);
         else
         if((zn1 == "+") && (zn2 == "-"))
         {
-            if(Bolshe(str1, str2) == ">")
+            if(Number.Bolshe(str1, str2) == ">")
             {
                 cout << "    " << Subtraction(str1, str2) << "\n";
             }
@@ -119,7 +148,7 @@ number.(str1, str2);
         }
         if((zn1 == "-") && (zn2 == "+"))
         {
-            if(Bolshe(str1, str2) == "<")
+            if(Number.Bolshe(str1, str2) == "<")
             {
                 cout << "    " << Subtraction(str1, str2) << "\n";
             }
@@ -132,19 +161,19 @@ number.(str1, str2);
     else
     if((deystvie == "-"))
     {
-        if(ifZero(str1, str2) == "str1 = 0")
+        if(Number.ifZero(str1, str2) == "str1 = 0")
         {
             cout << "    " << zn2 << str2 << "\n";
             break;
         }
         else
-        if(ifZero(str1, str2) == "str2 = 0")
+        if(Number.ifZero(str1, str2) == "str2 = 0")
         {
             cout << "    " << zn1 << str1 << "\n";
             break;
         }
         else
-        if(ifZero(str1, str2) == "str1, str2 = 0")
+        if(Number.ifZero(str1, str2) == "str1, str2 = 0")
         {
             cout << "    " << 0 << "\n";
             break;
@@ -162,7 +191,7 @@ number.(str1, str2);
         else
         if((zn1 == "+") && (zn2 == "+"))
         {
-            if((Bolshe(str1, str2) == "=") || (Bolshe(str1, str2) == ">"))
+            if((Number.Bolshe(str1, str2) == "=") || (Number.Bolshe(str1, str2) == ">"))
             {
                 cout << "    " << Subtraction(str1, str2) << "\n";
             }
@@ -173,7 +202,7 @@ number.(str1, str2);
         }
         if((zn1 == "-") && (zn2 == "-"))
         {
-            if((Bolshe(str1, str2) == "=") || (Bolshe(str1, str2) == "<"))
+            if((Number.Bolshe(str1, str2) == "=") || (Number.Bolshe(str1, str2) == "<"))
             {
                 cout << "    " << Subtraction(str1, str2) << "\n";
             }
@@ -186,7 +215,7 @@ number.(str1, str2);
     else
     if((deystvie == "*"))
     {
-        if(ifZero(str1, str2) == "str1, str2 = 0")
+        if(Number.ifZero(str1, str2) == "str1, str2 = 0")
         {
             cout << "    " << 0 << "\n";
         }
@@ -204,19 +233,19 @@ number.(str1, str2);
     else
     if((deystvie == "mod"))
     {
-        if(ifZero(str1, str2) == "str1 = 0")
+        if(Number.ifZero(str1, str2) == "str1 = 0")
         {
             cout << "    " << 0 << "\n";
             break;
         }
         else
-        if(ifZero(str1, str2) == "str2 = 0")
+        if(Number.ifZero(str1, str2) == "str2 = 0")
         {
             cout << "    " << "Делить на 0 нельзя" << "\n";
             break;
         }
         else
-        if(ifZero(str1, str2) == "str1, str2 = 0")
+        if(Number.ifZero(str1, str2) == "str1, str2 = 0")
         {
             cout << "    " << "Делить на 0 нельзя" << "\n";
             break;
@@ -235,19 +264,19 @@ number.(str1, str2);
     else
     if((deystvie == "div"))
     {
-        if(ifZero(str1, str2) == "str1 = 0")
+        if(Number.ifZero(str1, str2) == "str1 = 0")
         {
             cout << "    " << 0 << "\n";
             break;
         }
         else
-        if(ifZero(str1, str2) == "str2 = 0")
+        if(Number.ifZero(str1, str2) == "str2 = 0")
         {
             cout << "    " << "Делить на 0 нельзя" << "\n";
             break;
         }
         else
-        if(ifZero(str1, str2) == "str1, str2 = 0")
+        if(Number.ifZero(str1, str2) == "str1, str2 = 0")
         {
             cout << "    " << "Делить на 0 нельзя" << "\n";
             break;
