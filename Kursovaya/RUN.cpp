@@ -253,12 +253,12 @@ int main()
         else
         if(((zn1 == "+") && (zn2 == "+")) || ((zn1 == "-") && (zn2 == "-")))
         {
-            cout << "    " << DMod(str1, str2) << "\n";
+            cout << "    " << Division(str1, str2, deystvie) << "\n";
         }
         else
         if(((zn1 == "-") && (zn2 == "+")) || ((zn1 == "+") && (zn2 == "-")))
         {
-            cout << "   -" << DMod(str1, str2) << "\n";
+            cout << "   -" << Division(str1, str2, deystvie) << "\n";
         }
     }
     else
@@ -284,12 +284,12 @@ int main()
         else
         if(((zn1 == "+") && (zn2 == "+")) || ((zn1 == "-") && (zn2 == "-")))
         {
-            cout << "    " << DDiv(str1, str2) << "\n";
+            cout << "    " << Division(str1, str2, deystvie) << "\n";
         }
         else
         if(((zn1 == "-") && (zn2 == "+")) || ((zn1 == "+") && (zn2 == "-")))
         {
-            cout << "   -" << DDiv(str1, str2) << "\n";
+            cout << "   -" << Division(str1, str2, deystvie) << "\n";
         }
     }
 

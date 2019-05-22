@@ -1,9 +1,15 @@
 #ifndef DelenieDiv
 #define DelenieDiv
 
-string DDiv(string s1, string s2)
+string Division(string s1, string s2, string deystvie)
 {
   string s11, s22, result = "";
+  s11 = s1;
+  s22 = s2;
+  string x, y = "0";
+  string buffer = "";
+  string i = "0";
+
   if (Bolshe(s1, s2) == "=")
   {
     return "1";
@@ -15,15 +21,29 @@ string DDiv(string s1, string s2)
   }
   else
   {
-    s11 = s1;
-    s22 = s2;
-    string buffer = "";
-    string i = "0";
-    while(1)
+    cout << "Bolshe(s11, result) " << Bolshe(s11, result) << endl;
+    while(Bolshe(s11, result) == ">")
     {
-
+      cout << "Bolshe(s11, result) " << Bolshe(s11, result) << endl;
+      cout << "x " << x << endl;
+      result = Multiplication(x, s22);
+      x = Addition(x, "1");
     }
-    return result;
+    while(Bolshe(s11, result) == ">")
+    {
+      cout << "Bolshe(s11, result) " << Bolshe(s11, result) << endl;
+      cout << "y " << y << endl;
+      result = Addition(y, "1");
+      y = Addition(y, "1");
+    }
+    if(deystvie == "div")
+    {
+      return x;
+    }
+    else
+    {
+      return y;
+    }
   }
 
 }
